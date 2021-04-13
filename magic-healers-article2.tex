@@ -1,0 +1,894 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdfauthor={Aaron D. Lightner; Cynthiann Heckelsmiller; Edward H. Hagen},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{pdflscape}
+\usepackage{setspace}
+\doublespacing
+\usepackage{lineno}
+\linenumbers
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\title{\LARGE \textbf{How useful are supernatural theories of disease?}}
+\author{Aaron D. Lightner\footnote{Corresponding author, \href{mailto:aaron.lightner@wsu.edu}{\nolinkurl{aaron.lightner@wsu.edu}}} \and Cynthiann Heckelsmiller \and Edward H. Hagen}
+\date{\emph{Department of Anthropology, Washington State University}}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+``Religious'' healing specialists such as shamans often use magic. Evolutionary theories that seek to explain why laypersons find these specialists convincing focus on the origins of magical cognition and belief in the supernatural. In a two-part study, we reframe the problem by investigating relationships among ethnomedical specialists, who possess extensive theories of disease that can often appear ``supernatural'', vs.~religious healing specialists. In study 1, we coded and analyzed cross-cultural descriptions of ethnomedical specialists in 47 cultures, finding 24\% were also religious leaders and 74\% used ``supernatural'' theories of disease. Using these data, we found correlates of the use of supernatural concepts, such as costly rituals, identify incentives and disincentives to patronize ethnomedical specialists, and developed a taxonomy of ethnomedical specialists that included prestigious teachers, feared diviners, and efficacious healers. In study 2, we interviewed 84 Maasai pastoralists and their traditional religious and non-religious healing specialists. We found that laypersons relied on medicinal services based on combinations of efficacy, religious identity, and interpersonal trust. Further, laypersons and specialists largely used abstract substance and essence terms to describe how local medicines work, rather than ``supernatural'' concepts. We conclude that religious healers in traditional societies often fulfill a practical and specialized service to local clients, and argue that ``supernatural'' theories of disease often reflect abstract cognition about rare phenomena whose causes are unobservable (e.g., infection, mental illness) instead of a separate ``religious'' style of thinking.
+\end{abstract}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+In his seminal work on comparative religion, Frazer (1890) considered shamans and other religious practitioners in small-scale societies to be performance artists without serious regard for scientific knowledge, notably stating that for them ``magic is always an art, never a science'' (p.~34). These individuals, who we refer to as \emph{religious specialists}, invoke the supernatural while healing illnesses and performing divination rituals (Winkelman and White 1987; Eliade, Trask, and Doniger 2004). In the anthropological literature, ``religion'' is a family resemblance category referring to traditions that deal with activities such as ritual techniques for diagnosing the unknown, and ``supernatural'' concepts such as spirits, souls, and witchcraft (Needham 1975). In traditional societies, most religious specialists deal with practical problems such as health, illness, crop failures, or natural disasters (Peoples, Duda, and Marlowe 2016; Boyer 2020).
+
+In practical task domains that can involve high stakes and uncertainty, such as medicine, it is unclear why specialists should use ``religious'' methods, particularly if using ``scientific'' ones would be a more effective strategy. This is especially puzzling for evolutionary theorists: What advantages, if any, could religious specialists gain by relying on religious methods for healing? And conversely, why should laypersons find religious methods convincing and/or pay costs to religious specialists as patrons? We address these questions by focusing specifically on specialists who deal with health, medicine, and illnesses.
+
+\hypertarget{a-standard-account-the-subjective-appeal-of-magical-healing}{%
+\subsection{A standard account: The subjective appeal of magical healing}\label{a-standard-account-the-subjective-appeal-of-magical-healing}}
+
+An influential evolutionary explanation of religious specialization focuses on the origins of ``magical thinking'' as a cognitive byproduct. According to this view, human cognition is susceptible to supernatural beliefs and superstitious behaviors, which themselves are evolutionary byproducts of adaptive error management strategies: When an outcome is uncertain and false negatives are costly, adaptive strategies can include over-attributing agency to non-agents (Guthrie 1995) and spuriously inferring causes that appear ``superstitious'' to more knowledgeable observers (Foster and Kokko 2009). More generally, humans' adaptive capacities for reasoning about other minds, material artifacts, physical processes, and biological kinds might make ``religious'' ideas cognitively appealing (Kelemen 2004; Boyer and Bergstrom 2008).
+
+Most proponents of this view also argue that cognitive byproducts alone are insufficient for religion to gain traction, because the space of possible religious ideas vastly outweighs the space of those that culturally evolve in reality to become sacred, socially sanctioned religious ideas (Atran 2002). A complete evolutionary account of religion therefore requires an explanation of the social origins of religious institutions, in addition to its cognitive origins (Norenzayan 2015).
+
+Explanations that complement the cognitive byproduct account focus on the social benefits of participating in religion, such as improved within-group cooperation, that offset the potential costs of participating in rituals or observing taboos (Wilson 2010; Chwe 2013). Religious specialists sometimes play a coordinative leadership role by publicly performing rituals, facilitating the spread of some religious beliefs over others by giving them ``rehearsal time'' at the social group level (Dennett 2006). These rituals are often costly, and one possible reason for religious specialists to gain traction is based on the subjective appeal of their displays to laypersons, which might attract the attention of admiration of potential followers (credibility enhancing displays; Henrich 2009; Singh 2018). The displays made by religious specialists, and the behaviors they inspire among religious followers, can provide societies with real benefits, such as improved between-group competitiveness (Norenzayan 2015), improvements to the local ecology (Purzycki 2016), social bonding, and/or ingroup signals of cooperative intent (Sosis and Alcorta 2003).
+
+\hypertarget{convincing-displays-of-supernatural-ability}{%
+\subsubsection{Convincing displays of supernatural ability?}\label{convincing-displays-of-supernatural-ability}}
+
+Magical thinking about uncertain and high-stakes phenomena makes laypersons susceptible to exploitation, providing an opportunity for aspiring religious specialists. For serious yet rare events whose causes are opaque, such as many illnesses, laypersons could benefit by gambling on the advice of knowledgeable, trustworthy sources of information or aid (Morin 2015; Lightner and Hagen 2021). Religious specialists, on the other hand, could gain an advantage by using ``plausible-seeming magical practices'' that pander to intuitions about invisible and malevolent agents, with whom the specialist can negotiate to treat the illness. On this view, the religious specialist can gain prestige and patronage because the effectiveness of a magical practice is difficult to evaluate and/or prone to confirmation bias (Strimling, Enquist, and Eriksson 2009; Singh 2018).
+
+Religious specialization might therefore represent a reliably-occurring, culturally evolved opportunity for adapting to people's intuitions and convincing laypersons that the specialist can influence otherwise unpredictable and high-stakes outcomes (Singh 2018). Professionalizing this opportunity can (and often does) involve religious specialists who not only convince others of their supernatural abilities, such as healing, but also gain deference through fears of their abilities to impose harms and/or resources through patronage (Singh 2021).
+
+Exploitation of cognitive byproducts fails to explain some important phenomena: Why do the areas of religious specialization so frequently relate to healing, e.g., compared to other unpredictable and high-stakes outcomes? And more importantly, if religious specialists are performers who use culturally evolved myths and customs that ``hack our psychologies and placate our anxieties'' (Singh 2018:17), then why should laypersons settle for the ``religious'' healer if a ``scientific'' one could be more reliable?
+
+\hypertarget{an-alternative-account-religion-ethnomedicine-and-a-market-for-useful-services}{%
+\subsection{An alternative account: Religion, ethnomedicine, and a market for useful services}\label{an-alternative-account-religion-ethnomedicine-and-a-market-for-useful-services}}
+
+A mutually compatible explanation for religious specialization is that the ``religious'' healer \emph{is} the ``scientific'' healer, and that patronage from laypersons is based on the actual efficacy of a specialist's treatments.\footnote{We use "efficacy", like the standard definition in medicine, to refer to the effectiveness of a treatment method in obtaining its desired outcome.} We refer to this idea as the \emph{efficacious healing} hypothesis. People everywhere use folk scientific knowledge to make causal inferences and navigate uncertainty (Sperber, Premack, and Premack 1995; Szollosi and Newell 2020), and traditional knowledge systems are widely interpreted as providing useful, practical solutions for recurring challenges in a given socioecological environment (e.g., Glowacki 2020; Rappaport 1968; Steward 1972; Lansing and Kremer 1993).
+
+In many societies, local specialists master elaborate systems of culturally evolved knowledge that require costly investments of time, resources, and opportunity costs (Lightner, Heckelsmiller, and Hagen 2021). Cross-culturally, medicine is one of the most common domains of folk scientific knowledge (Erickson 2007; Singer and Erickson 2011), and most adults in traditional and small-scale societies have at least some knowledge of medicinal plants and health-related practices, i.e., \emph{ethnomedical knowledge} (Conklin 1980; Medin and Atran 2004; Lozada, Ladio, and Weigandt 2006). Nevertheless, even these societies typically have individuals who specialize in efficacious, culturally evolved strategies for alleviating locally salient diseases (Berlin and Berlin 2015). We refer to these individuals, whose extensive medicinal knowledge can include herbal medicines, animal venoms, and human physiology, as \emph{ethnomedical specialists}.
+
+\hypertarget{a-market-for-efficacious-ethnomedical-specialists}{%
+\subsubsection{A market for efficacious ethnomedical specialists}\label{a-market-for-efficacious-ethnomedical-specialists}}
+
+Much research has focused on the cognitive, social, and ecological factors behind scientific knowledge (Carruthers, Stich, and Siegal 2002; Heintz 2007; Nersessian 2010; Thagard 2019), but the relationship between specialists and laypersons is less clear, particularly among ethnomedical specialists. What benefits, if any, do ethnomedical specialists provide to laypersons in traditional societies, and what benefits do the specialists gain in return?
+
+People might favor knowledgeable ethnomedical specialists because they provide valuable services when stakes are high, especially for know-how that is inefficient to learn individually. If a service resolves a sufficiently uncommon and serious problem, such as an unlikely but deadly illness, then knowing how to diagnose and heal the illness can favor a market for specialized knowledge: for the average individual, the cost of mastering these skills might be greater than the cost of paying a specialist to do so, if and when the serious event arises. Ethnomedical specialists can therefore improve their own prospects by professionalizing an opportunity to provide valuable knowledge-based services, such as efficacious healing techniques, to their clients in exchange for benefits, such as payments or prestige. Clients do not necessarily learn the skills or knowledge underlying the service -- patients who receive diagnosis and treatment do not thereby become doctors -- but they might evaluate specialists based on individual-level feedback when they are recipients of specialists' services. We refer to this idea, which builds on the work of many others, as the \emph{market for specialists} hypothesis (see, e.g., Hagen and Garfield 2019; Tooby and Cosmides 1996; Sugiyama and Sugiyama 2004).
+
+Another view of the specialist-layperson relationship is that it is akin to mentorship. On this view, which we refer to as the \emph{mentorship} hypothesis, experts possess valuable skills, and laypersons exchange deference for proximity so as to better acquire the skills for themselves (Boyd, Richerson, and Henrich 2011). Laypersons are not patrons \emph{per se}, but are acolytes who can use ecologically rational cues to determine who to learn from: People might decide based on who others are copying (Henrich and Boyd 1998), make judgments based on prestige (Henrich and Gil-White 2001), and/or perceive overlapping interests (Singh, Wrangham, and Glowacki 2017).
+
+\hypertarget{is-ethnomedicine-religious}{%
+\subsubsection{Is ethnomedicine ``religious''?}\label{is-ethnomedicine-religious}}
+
+The extent to which ethnomedical specialists resemble religious specialists is unclear. Historically, traditional scientific knowledge systems in Western and non-Western societies have included intuitive humoral and sympathetic concepts, e.g., among ancient Greeks, Quetzi Mayan, Ayurvedic, and Amharic Debtera medical knowledge systems (Young 1975; Atran and Medin 2008; Jaiswal and Williams 2016). To the modern Western observer, traditional ethnomedical concepts about infection, for example, might be easily interpreted as ``religious'' or ``supernatural'' based on their resemblances to spirits or magical contagion (Gottlieb 2004).
+
+Conversely, religious healers such as shamans and priests employ esoteric and supernatural concepts in their practices, the medicinal and/or psychological benefits of which might help explain the evolution of religious ritual (Winkelman 1990; McClenon 1997). In at least some cases, they also display evidence of technical expertise in diagnosing and effectively curing illnesses with herbs (Andritzky 1989; Blackwell and Purzycki 2018).
+
+We refer to the idea that ethnomedical specialists are also religious specialists (and vice versa) as the \emph{religiosity} hypothesis. If ``religious'' specialists are also the ``scientific'' ethnomedical specialists, however, then how can we explain why they use supernatural theories of disease instead of naturalistic theories? Should laypersons weigh the relative importance of more ``scientific'' specialists vs.~more ``religious'' ones?
+
+\hypertarget{a-misleading-distinction-between-science-and-religion}{%
+\subsubsection{A misleading distinction between science and religion}\label{a-misleading-distinction-between-science-and-religion}}
+
+Social sciences have long assumed that practical and scientific concerns vs.~religious ones are distinct aspects of both culture and psychology (e.g., James 1902; Frazer 1890; Weber 1920), and have largely developed their evolutionary theories of science separately from their evolutionary theories of religion.
+
+This separation between scientific and religious practices has been carried forward to modern theories about distinct types of cognition (Shenhav, Rand, and Greene 2012; Funk and Alper 2015; Uzarevic and Coleman 2020), or at least of two separate positions on a continuum where religion is developmentally ``natural'' and science is not (McCauley 2013). This separation of religion, which seems intuitive, vs.~science, which does not, might appear patently obvious and only motivate questions about \emph{how} religion and science relate to each other (for a range of perspectives, see Barbour 1966; Draper 2009; Gould 2011; Coyne 2016).
+
+Although scientific and religious institutions have a long and complex history of political and ideological conflict among Western societies, it is not obvious that a distinction between ``science'' and ``religion'' is useful for analyzing beliefs and institutions in most non-Western societies. The Western institutional separation of science and religion might misleadingly lead theorists to carry this separation over into their evolutionary perspectives of cognition (Boyer 2018; Sperber 2018). In small-scale societies, anthropologists have documented uses of magic and religion for practical tasks involving high-stakes risk and uncertainty (Malinowski 1932; Evans-Pritchard 1940), often integrating \emph{natural} and \emph{supernatural} concepts into unified explanatory frameworks (Legare et al. 2012; Tucker et al. 2015).\footnote{While \emph{supernatural} is arguably an ethnocentric concept (see Sperber 2018), it is nevertheless central to defining religious belief systems in the existing literature. Indeed, this objection is an empirical claim, rather than an assumption, which we test in the present study.} In a classic example, Zande farmers understand the natural causes of unfortunate granary collapses (termites), but particular \emph{occurrences} of these collapses demand supernatural explanation (witchcraft) (Evans-Pritchard and Gillies 1976).
+
+At cognitive and behavioral levels, Westerners also integrate ``scientific'' and ``religious'' concepts by resorting to ritual in times of high-stakes uncertainty (Gmelch 1971), appearing to use magical thinking in experiments (Rozin, Millman, and Nemeroff 1986), and merging natural and supernatural explanations for life, death, and disease (Legare et al. 2012). Historically, influential Western scientists, including Newton, Boyle, Hooke, and Kepler, were deeply religious and viewed much of their work as supplying evidence for a divine and transcendent creator (Gillispie 1996). The term ``scientist'' itself was not widespread until after the British Association's William Whewell coined it around 1834 as a suitable replacement for the term ``natural philosopher''. The term was meant to imply specialized commitments to creating knowledge (\emph{scientia}, in Latin), analogous to the artist's commitment to creating art (Snyder 2012).
+
+\hypertarget{mental-models-about-abstract-and-supernatural-phenomena}{%
+\subsubsection{Mental models about abstract and ``supernatural'' phenomena}\label{mental-models-about-abstract-and-supernatural-phenomena}}
+
+The alternative account therefore hypothesizes that ``science'' and ``religion'', while nominally distinct institutions among Western societies, are products of a cognitively integrated system whose evolved function is to acquire, exchange, and apply locally relevant social and ecological knowledge. Many anthropologists argue that religion should not be seen as a unitary phenomenon, nor that most societies have had ``religions'' in a useful sense of the term. Instead, small-scale societies, in which religion is not a hegemonic institution, have a variety of ideas, practices, and institutions that are described to varying degrees as ``religious'' in a loose and interpretive sense (Bloch 2008; Sperber 2018; Boyer 2020). That is, ``science'' is a culturally specific system for gaining practical knowledge (Heintz 2004), which might or might not include ``religious'' concepts.
+
+It is therefore unclear that cross-cultural and evolutionary perspectives of scientific knowledge should exclude religious belief, and vice versa. Applied to ethnomedicine, the cognitive function of ``supernatural'' thinking about theories of disease might be to mentally model and make inferences about rare or abstract phenomena whose causes are unobservable (e.g., infection, mental illness, probability, counterfactuals) instead of a separate ``religious'' style of thinking.
+
+\hypertarget{study-aims-and-hypotheses}{%
+\subsection{Study aims and hypotheses}\label{study-aims-and-hypotheses}}
+
+In a two-part study, we assessed the foregoing hypotheses about the roles of religiosity, efficacy, and knowledge specialization among ethnomedical specialists and their potential patrons. Study 1 was a cross-cultural study of ethnographic data from the electronic Human Relations Area Files (eHRAF), and study 2 was a field study with Tanzanian Maasai pastoralists.
+
+In study 1, we assessed levels of evidence in cross-cultural data for attributes supporting the roles of \emph{religiosity}, \emph{efficacy}, \emph{market specialization}, and \emph{mentorship} among ethnomedical specialists. We exclusively focused our search on examples of ethnomedical specialists rather than religious specialists, meaning that any resulting ethnographic examples of religious specialists, efficacious healers, or prestigious mentors were not a consequence of our search query, but a consequence of their association with ethnomedical specialists in the ethnographic record.
+
+In study 2, we investigated the criteria that patrons use to select among ethnomedical specialists, and their cultural models of medical treatments. Specifically, we interviewed 84 Tanzanian Maasai pastoralists about who they would favor among local medicinal specialists in the region if they were seriously ill and why. We also assessed cognitive models of disease by asking participants to detail their explanations for how a medicine for a common ailment works, and we introduce qualitative data from interviews with two local Maasai ethnomedical specialists and a traditional religious specialist. These interviews were conducted in a population undergoing a cultural and economic transition from pure cattle-based subsistence and trade, and toward a more Christian and cash-based market economy (Hodgson 2005).
+
+\hypertarget{study-1-cross-cultural-data}{%
+\section{Study 1: Cross-cultural data}\label{study-1-cross-cultural-data}}
+
+We used cross-cultural data from the eHRAF to investigate the hypotheses that ethnomedical specialists are \emph{religious}, offer \emph{efficacious} treatments, compete for patrons in a \emph{specialized market}, and are prestigious \emph{mentors} who teach acolytes. We focused exclusively on ethnographic descriptions of ethnomedical specialists (i.e., without attempting to search for religious specialists), so we compared the extent to which each of these hypotheses, which were not part of our search terms, were supported by ethnographic evidence.
+
+We also conducted extensive exploratory analyses at the text record level and the culture level. For example, we considered the correlates of supernatural theories of disease, religiosity, and acculturation, with acculturation interpreted as an ``expansion'' of pre-existing markets for ethnomedical specialists (e.g., via the introduction of infrastructure, hospitals and clinics, and/or foreign medicinal practices).
+
+\hypertarget{methods}{%
+\subsection{Methods}\label{methods}}
+
+We searched for ethnographic data about ethnomedical specialists from the eHRAF, a digitized database of primary ethnographic documents from over 400 cultures around the world. We restricted our search to the Probability Sample Files (PSF), a stratified subset of 60 cultures in the eHRAF that includes one randomly selected culture from 60 geographically diverse areas (Naroll 1967). Documents in the eHRAF are coded at the paragraph level using an Outline of Cultural Materials (OCM) hierarchically organized coding scheme, containing several hundred numeric codes assigned to unique and specific topics (Murdock et al. 2006).
+
+Previously, in a study of ethnoscientific expertise (Lightner et al. 2021), we searched the PSF for 68 OCM codes that could plausibly result in descriptions of expertise in conceptual, folk scientific knowledge domains, such as ethnobotany, ethnometeorology, and theories of disease. We narrowed this search using six keywords that refer to highly knowledgeable experts in those domains, such as ``expert*'', ``specialist*'', and ``practitioner*''.\footnote{The "*" is a wildcard that would match any suffix.} We did not include any OCM codes or search terms corresponding to religious topics. See Lightner et al. (2021) and the SI for a more in depth summary of our search protocol, which produced 547 text records in total.
+
+Whereas Lightner et al. (2021) broadly investigated social characteristics that might explain knowledge specialization as an evolutionary strategy, and did not focus on their religious or supernatural qualities, here we restricted our investigation to \emph{ethnomedical specialists}, resulting in 341 text records describing specialists with ethnomedical expertise. We included the 42 coded variables from Lightner et al. (2021) that characterized the knowledge domains and attributes (e.g., uses of plant knowledge) and social attributes (e.g., prestige) of ethnomedical specialists. We added 16 variables that characterized religious and supernatural dimensions of ethnomedical specialization, variables that would conceivably be important to patrons, such as the benefits and costs provided and imposed by specialists, and variables that indicated acculturation. This produced a total of 58 variables.
+
+Our resulting dataset represented ethnomedical specialists in 47 cultures, whose geographic distribution and subsistence strategies are shown in figure \ref{fig:worldmap}. Our 58 variables allowed us to assess the extent to which ethnomedical specialists were \emph{religious}, provided \emph{efficacious services}, engaged in a \emph{specialized market} for payment and patronage, and participated in \emph{mentorship} as prestigious teachers. Similar to the variables in Lightner et al. (2021), many of these variables related to knowledge attributes and social attributes. See figure \ref{fig:ehraftilevars} for our coded variables and their corresponding attributes and hypotheses.
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/worldmap-1} 
+
+}
+
+\caption{Geographic region of each culture included in our dataset of ethnomedical specialists. Colors and shapes indicate subsistence strategy for each cultural group, and sizes indicate the number of text records for each culture in our dataset.}\label{fig:worldmap}
+\end{figure}
+
+\end{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehraftilevars-1} 
+
+}
+
+\caption{Coded variables about ethnomedical specialists are listed along the y-axis. The relevance of each variable to each hypothesis, and whether it is a social or knowledge attribute, is listed with its opposing model along the x-axis. Filled cells indicate which variables are included in each hypothesis and/or type of attribute.}\label{fig:ehraftilevars}
+\end{figure}
+
+In a few cases, it was feasible to code variables with evidence against one of our coded variables. We coded on variables for \emph{prestige} and \emph{specialist confers benefits}, for example, but we also coded on variables for \emph{low status}, or ``anti-prestige'', and \emph{specialist imposes costs}. ADL and CH independently coded each text record for presence/absence (1/0) on each of our 58 variables, which generated a 85.5\% match with a Cohen's kappa indicating moderate agreement (\(k\) = 0.49). See the SI for more details about interrater reliability. Afterward, ADL and CH discussed and reconciled all disagreements to produce the coded dataset used in our analyses.
+
+Although most of our analyses were at the text record level, we were also interested in analyses at the culture level. We used the Standard Cross Cultural Sample (SCCS) to acquire variables at the culture level. The SCCS contained 44 of the 47 cultures in our eHRAF dataset, so text records from 3 cultures were excluded from analyses using the SCCS data.\footnote{The eHRAF data is our primary dataset of coded data from ethnographic text records about ethnomedical specialists, and should not be confused for the SCCS dataset that we used for this particular cross-cultural analysis. All references to "the data" or "the dataset" in Study 1 should therefore be assumed to be the eHRAF dataset, unless it is specified as the SCCS dataset.}
+
+\hypertarget{statistical-analyses}{%
+\subsubsection{Statistical analyses}\label{statistical-analyses}}
+
+Our dataset comprised a 341 row by 58 column binary matrix, where each row represented one text record on ethnomedical specialists, and each column represented one coded variable (0=no evidence, 1=evidence). We analyzed this matrix in four ways. First, we computed the proportion of text records that provided evidence for each variable. Second, we grouped variables representing each hypothesis, and computed the mean proportion of evidence for each hypothesis (which we termed its \emph{total score}). Third, we used hierarchical and penalized (elasticnet) regression models to determine the association of supernatural and religious concepts with other dimensions of ethnomedical specialization, the association of supernatural and religious concepts with culture-level factors, such as continental region, mode of subsistence, and cultural complexity (using variables obtained from separate SCCS data; Kirby et al. 2016), and the association of acculturation with dimensions of ethnomedical specialization. Finally, to examine structure in our entire data matrix, i.e., to determine which groups of variables tended to have evidence in the same text records and therefore might indicate important abstractions about ethnomedical specialization, we used a network clustering technique known as a minimum spanning tree (MST), in which only similar variables (the vertices) are connected to each other. We then identified ``clusters'' of variables by visual inspection of the MST, seeking groups of adjacent variables that were conceptually related. For a full description of our statistical analyses, see the SI. We also provide all data and R code: \url{https://github.com/alightner/ethnomedicine-magic}.
+
+\hypertarget{results}{%
+\subsection{Results}\label{results}}
+
+The text record level evidence for each of the 58 coded variables, which we broadly characterize as knowledge and social attributes, are shown in figure \ref{fig:ehrafTotalEvidence}. We found high levels of evidence for supernatural theories of disease, uses of botanical knowledge, and narrow specialization. Text records frequently described multiple specialists who were distributed among separate roles with complementary specializations, often with collaborative relationships. In some cases, ethnomedical specialists were situated in a hierarchy with prestige, and engaged in public performances. Sometimes knowledge was clearly restricted to the specialists -- in some of these cases the knowledge was intentionally kept secret -- and sometimes the specialists were simply more knowledgeable and/or skilled compared to others in their society (figure \ref{fig:ehrafTotalEvidence}).
+
+Most ethnomedical specialists (74\%) used at least some ``supernatural'' concepts, such as witches, spirits, or deities. Some ethnomedical specialists had religious leadership roles (24\%) and/or performed divination rituals during times of uncertainty (13\%). When we grouped our variables according to hypotheses, their total scores showed relatively high levels of evidence for a market for specialists, efficacious healing, and religiosity. We found relatively less evidence for and against mentorship, and for inefficacious healing practices. See figure \ref{fig:ehrafReligiousEvidence}.
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafTotalEvidence-1} 
+
+}
+
+\caption{Text record and cultural group levels support for knowledge attributes (upper facet) and social attributes (lower facet) among ethnomedical specialists in our eHRAF data sample. Error bars are +/- 2 SE.}\label{fig:ehrafTotalEvidence}
+\end{figure}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafReligiousEvidence-1} 
+
+}
+
+\caption{Support for each variable, faceted by hypothesis. Points represent the percentage of evidence for that variable (the fixed-effect intercept from a generalized linear mixed effects model), and colors indicate whether that percentage is at the level of text record (percentage of text records with evidence), culture (percentage of cultures with evidence), or total model score (percentage of text records with evidence for any variable defining a given model). Error bars are +/- 2 SE.}\label{fig:ehrafReligiousEvidence}
+\end{figure}
+
+\hypertarget{religion-and-the-supernatural-among-ethnomedical-specialists}{%
+\subsubsection{Religion and the supernatural among ethnomedical specialists}\label{religion-and-the-supernatural-among-ethnomedical-specialists}}
+
+The elasticnet regression model with religion scores for each text record as the outcome variable showed that variables most positively associated with evidence for religion were ethnospecialists assisting with uncommon and serious problems, imposing costs on others, specializing in theories of psychology, and possessing secretive knowledge. Religious ethnomedical specialists were also positively associated with multiple specialists whose knowledge was distributed across multiple roles. Predictors that were most negatively associated with evidence for religion were acculturation, purchased knowledge, and healing injuries (figure \ref{fig:ehrafreligionLasso}A). Neither regional variation nor subsistence strategy were associated with substantial variation in religion scores at the culture level (figures \ref{fig:ehrafRegionSub}A and \ref{fig:ehrafRegionSub}B).
+
+The elasticnet regression model with presence/absence of supernatural theories in each text record as the outcome variable showed that the supernatural was positively associated with divination, costly rituals and initiation processes, and religious leadership. This model also showed that the supernatural was negatively associated with acculturation and evidence of success in their healing practices. See figure \ref{fig:ehrafreligionLasso}B. At the culture level, ethnomedical specialists' uses of the supernatural did not systematically vary by region or subsistence strategy, although intensive agriculturalists appeared to have less evidence for supernatural healing compared to horticulturalists (figures \ref{fig:ehrafRegionSub}C and \ref{fig:ehrafRegionSub}D).
+
+\begin{landscape}
+
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafreligionLasso-1} 
+
+}
+
+\caption{A: Regression coefficients from the elasticnet model of religiosity, where each presence/absence variable along the y-axis is a predictor and the total score for religiosity in each text record was the outcome. B: Regression coefficients from the elasticnet model, where each presence/absence variable along the y-axis is a predictor and presence of evidence for supernatural theories of disease used by ethnomedical specialists is the outcome. Estimates are reported as odds ratios. Note that the x-axis is log-scaled.}\label{fig:ehrafreligionLasso}
+\end{figure}
+
+
+
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafRegionSub-1} 
+
+}
+
+\caption{Estimated marginal means of religiosity scores by geographic region (A) and subsistence strategy (B) at the text record level, and for the proportion of supernatural theories of disease by geographic region (C) and subsistence strategy (D). Estimates are based on separate generalized linear mixed models with cultures as random intercepts. Facets A and B are based on poisson regression estimates, and facets C and D are based on logistic regression estimates. Error bars are +/- 2 SE.}\label{fig:ehrafRegionSub}
+\end{figure}
+
+\end{landscape}
+
+\hypertarget{supernatural-theories-of-disease-are-about-the-uncertain-and-the-unobservable}{%
+\subsubsection{Supernatural theories of disease are about the uncertain and the unobservable}\label{supernatural-theories-of-disease-are-about-the-uncertain-and-the-unobservable}}
+
+Ethnomedical specialists often specialized in specific knowledge or skill domains, which included conceptual, ethnoscientific domains such as plant and animal knowledge. Supernatural theories of disease were more frequent in domains that are unobservable and uncertain, such as divination, misfortune, uncertainty, and psychology, and less frequent in domains involving some observable motor activity, such as physical injuries and childbirth (figure \ref{fig:ehrafdomainSupernaturalPlot}).
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafdomainSupernaturalPlot-1} 
+
+}
+
+\caption{Graph representing commonly occurring domains of knowledge and skill that co-occurred with medicinal knowledge in text records in our dataset. Vertices indicate domains that occurred in at least ten text records, and vertex size corresponds to the number of text records including that domain. Vertex colors indicate the proportion of supernatural theories of disease that was associated with each knowledge domain. Each edge indicates that a pair of knowledge/skill domains co-occurred in at least one text record. Edge widths indicate the frequency with which each domain pair co-occurred, as determined by the number of text records describing them together, and normalized by the maximum frequency = 113.}\label{fig:ehrafdomainSupernaturalPlot}
+\end{figure}
+
+The first two components of a PCA of the 186 cultures in the SCCS data (see the SI) were interpretable as ``culture complexity and scale'' (PC1) and ``pathogen stress and proximity to the equator'' (PC2). See figure \ref{fig:sccsPCAloadings}. We plotted the PC1 and PC2 values of the 44 cultures that were also in our eHRAF sample of ethnomedical specialists (3 cultures were not included in the SCCS). The eHRAF cultures that were higher on PC2 (i.e., higher pathogen stress, closer to the equator) appeared to account for many of the above-average proportions of text records with supernatural theories of disease (figure \ref{fig:sccsBiplot}). (See the SI for a GLMM in which PC2 is a significant predictor of supernatural but PC1 is not.)
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/sccsPCAloadings-1} 
+
+}
+
+\caption{PCA loadings on the first two principal components in the SCCS dataset (sorted by loading values). A: PC1 corresponds to cultural complexity, population size, and societal scale. B: PC2 corresponds to pathogen stress, market and cash-based economies, and proximity to the equator (low absolute values of latitude).}\label{fig:sccsPCAloadings}
+\end{figure}
+
+
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/sccsBiplot-1} 
+
+}
+
+\caption{PC1 (cultural complexity) and PC2 (pathogen stress/proximity to the equator) values for each of the 44 eHRAF cultures that were in our study and the SCCS. (Note that cultures with large positive PC2 values are closer to the equator.) Point colors indicate whether each culture had an above average proportion of supernatural theories of disease, and point sizes indicate the number of ethnographers who contributed the text records about a culture.}\label{fig:sccsBiplot}
+\end{figure}
+
+
+\end{landscape}
+
+\hypertarget{markets-and-mentorship-among-ethnomedical-specialists}{%
+\subsubsection{Markets and mentorship among ethnomedical specialists}\label{markets-and-mentorship-among-ethnomedical-specialists}}
+
+We found substantial evidence for the ``market for specialists'' variables and some evidence for the ``prestigious mentors'' variables (figure \ref{fig:ehrafReligiousEvidence}). Here, we investigate the social relationships among ethnomedical specialists and laypersons as potential acolytes and/or patrons. Incentives for patrons and acolytes to favor ethnomedical specialists were more common than disincentives, and specialists often possessed rare and valuable knowledge (figure \ref{fig:ehrafincentivesPlot}). Modeling pairs of incentives and their opposing variables -- which were often disincentives -- suggested that ethnomedical specialists usually conferred benefits to others, gained patronage based on their reputations for efficacy, assisted with uncommon and serious problems, were more often successful at healing than they were unsuccessful, and rarely offered their services for free. Evidence for trustworthy vs.~untrustworthy specialists was about evenly split (figure \ref{fig:ehrafincentivesPlot}).
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafincentivesPlot-1} 
+
+}
+
+\caption{A: Text record and cultural group levels support for different incentives and disincentives that were associated with ethnomedical specialists in our eHRAF data sample. Points represent the percentage of evidence for that variable (the fixed-effect intercept from a generalized linear mixed effects model), and colors indicate whether that percentage is at the level of text record (percentage of text records with evidence), culture (percentage of cultures with evidence). B: Logistic regression coefficients among models of presence of evidence for vs. against each of the incentives for favoring ethnomedical specialists. Estimates are reported as odds ratios, and note that the x-axis is log-scaled. Error bars in both plots are +/- 2 SE.}\label{fig:ehrafincentivesPlot}
+\end{figure}
+
+\end{landscape}
+
+Acculturation was our proxy for expanding markets for ethnomedical specialists, and was positively associated with patronage based on efficacy, specialists with a reputation for efficacy, evidence of success and failure, and specialists conferring benefits to patrons. Acculturation was negatively associated with rare knowledge, specialists prescribing ritual behaviors, and supernatural theories of disease (figure \ref{fig:ehrafAcculturation}).
+
+\begin{figure}
+\centering
+\includegraphics{magic-healers-article2_files/figure-latex/ehrafAcculturation-1.pdf}
+\caption{\label{fig:ehrafAcculturation}Fixed effects of acculturation on the proportion of text record evidence for each of the variables that had at least 10\% support. Acculturation was the predictor in each GLMM and each variable listed along the y-axis was an outcome. Estimates on the log-scaled x-axis are reported as odds ratios. Error bars are +/- 2 SE, and colors indicate religious variables or specialized services.}
+\end{figure}
+
+\hypertarget{classifying-ethnomedical-specialists-based-on-structure-in-the-entire-data-matrix}{%
+\subsubsection{Classifying ethnomedical specialists based on structure in the entire data matrix}\label{classifying-ethnomedical-specialists-based-on-structure-in-the-entire-data-matrix}}
+
+Our MST revealed three branches of similar variables, which we interpreted as a taxonomy of three broad types of ethnomedical specialists: the ``efficacious healer'', the ``feared diviner'', and the ``prestigious teacher'' (figure \ref{fig:ehrafmsttaxonomy}). These interpretations are based on the variables within each of the three branches, which also contain informative sub-branches comprising similar variables. These three broad types of ethnomedical specialist are equally close to two central nodes at the root of our entire taxonomy: \emph{supernatural} theories of disease and \emph{religious leadership}.
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/ehrafmsttaxonomy-1} 
+
+}
+
+\caption{Minimum spanning tree of the binary distance matrix of the variables in our dataset about ethnomedical specialists. Vertices represent variables, and vertex sizes correspond to levels of text record evidence for each variable. Edge lengths represent binary distances between variables. Annotations refer to our interpretations of each branch, which we interpret as a taxonomy of ethnomedical specialists.}\label{fig:ehrafmsttaxonomy}
+\end{figure}
+
+\end{landscape}
+
+\hypertarget{discussion-of-study-1}{%
+\subsection{Discussion of Study 1}\label{discussion-of-study-1}}
+
+Ethnomedical specialists were frequently sources of valuable knowledge, and provided efficacious treatments for specific, uncommon and serious illnesses (figure \ref{fig:ehrafTotalEvidence}). Although our search terms deliberately did not include religious topics, ethnomedical specialization nevertheless was frequently described as a ``religious'' occupation (figures \ref{fig:ehrafReligiousEvidence} and \ref{fig:ehrafreligionLasso}). Specialists were often formal or semi-formal religious leaders such as priests and shamans, and in fewer cases, held politically influential roles. Most specialists across cultures, regardless of region or subsistence strategy, invoked ``supernatural'' concepts in their theories of disease, such as witches, spirits, or deities, and many also performed ``religious'' behaviors, such as costly rituals and divination during times of uncertainty (figures \ref{fig:ehrafreligionLasso} and \ref{fig:ehrafRegionSub}).
+
+We found that supernatural theories of disease were more common among ethnomedical specialists who deal with conceptual knowledge about unobservable phenomena, such as interpreting mental illnesses or providing herbal remedies for infections, and were less common among those who deal with observable phenomena, such as childbirth and physical injuries (e.g., bone-setting and wound mending) (figure \ref{fig:ehrafdomainSupernaturalPlot}). Our PCA of the SCCS data found PC1 indexed culture complexity and scale, and PC2 indexed pathogen stress and proximity to the equator. Among cultures with higher pathogen stress (high PC2 values) -- and therefore higher chances of serious illnesses due to infection -- we saw a higher prevalence of supernatural theories of disease (figures \ref{fig:sccsPCAloadings} and \ref{fig:sccsBiplot}). We caution that pathogen stress and proximity to the equator are highly confounded with many other relevant factors, such as money-based economies and agricultural intensification (the latter two also loaded on PC2).
+
+As high levels of support for the ``market for specialists'' hypothesis suggested, many ethnomedical specialists served a practical function in their societies, regardless of their ``religiosity'' (figure \ref{fig:ehrafReligiousEvidence}). Incentives for favoring an ethnomedical specialist generally outweighed the disincentives, which were usually payments rendered for healing or teaching. Markets for specialists seemed to intensify with acculturation, which was positively associated with variables relating to efficacy, and negatively associated with supernatural theories of disease (figure \ref{fig:ehrafAcculturation}). Acculturation, as coded by the OCM scheme and our coding protocol, often referred to a presence of Western medicine, such as nearby hospitals and clinics. Services were frequently for uncommon and serious illnesses, rather than common or everyday health issues (figure \ref{fig:ehrafincentivesPlot}). We speculate that it is more efficient for laypersons to outsource sufficiently uncommon and serious problems to specialists rather than individually or socially learn solutions themselves (see also Hagen and Garfield 2019; Sugiyama and Sugiyama 2004).
+
+We and others have argued that religion is at least partly an epiphenomenon of science, and the distinction between the two in Western cultures is primarily institutional (e.g., Sperber 2018; Boyer 2020). That is, supernatural concepts about ``religious'' entities vs.~invisible forces invoked by ``scientific'' folk theories might share common cognitive characteristics (similar to the continuity hypothesis; Carruthers et al.~2002, p.~74). In our data, abstract essences such as bodily humors were not themselves coded as ``supernatural'', but they frequently co-occurred with the descriptions of spirits, ghosts, or other invisible agents that were. Indeed, Western folk scientific concepts about ``germs'' often resemble sympathetic magic or agentive thinking (Siegal 2002; Gottlieb 2004), and folk psychological concepts often invoke hidden invisible forces such as ``souls''.
+
+We also found associations among supernatural theories of disease, religiosity, divination, evidence of failure, and costly rituals -- which are not obviously explainable by efficacious or ``scientific'' healing practices. This seems to suggest that at least some religious specialists in our data do not conform to our hypotheses about efficacious healing or a market for specialists.
+The MST in figure \ref{fig:ehrafmsttaxonomy} suggested a taxonomy, with three types of ethnomedical specialists emerging from structure in the data. We refer to the largest and most well-supported branch on this taxonomy as the ``efficacious healers'', the attributes of which are unified by \emph{conferring benefits to others} and \emph{receiving payment} at their root. Consistent with the market for specialists hypothesis, sub-branches included variables relevant to patronage, efficacious healing, and narrow specialists with rare and valuable knowledge (Tooby and Cosmides 1996).
+
+The most diverse branch was ``prestigious teachers'', sub-branches of which generally conformed to the ``mentorship hypothesis'' (and many of the prestigious mentors emphasized in literature on social learning biases and cultural transmission, e.g., Richerson and Boyd 2005), along with prosocial and trustworthy leaders (Garfield, Hubbard, and Hagen 2019), and charismatic and prestigious shamans (Singh 2018). Perhaps unsurprising among ethnomedical specialists, we found less evidence for this branch compared to the ``efficacious healers''; in a cross-cultural study of 55 traditional societies, Lightner et al. (2021) found that apprenticeships, mentorships, and other forms of social learning were associated with experts who were skillful in everyday tasks with easily observable motor skills, such as toolmaking and food preparation.
+
+A third type, the ``feared diviners'', interpreted misfortune and psychological phenomena, and were characterized by traits that conflicted with our hypotheses about efficacious ``scientific'' healers, such as costly lifestyles, low status, and distrust among the laypersons who they might harm (Singh 2021).
+
+Further supporting our conclusions about the centrality of supernatural concepts and ``religious'' specialization in medicine, these three types of ethnomedical specialists were unified by their mutual associations with religious leadership and supernatural theories of disease, central nodes in the MST.
+
+\hypertarget{study-2-maasai-field-data}{%
+\section{Study 2: Maasai field data}\label{study-2-maasai-field-data}}
+
+In study 2 among Tanzanian Maasai pastoralists, we focused on the criteria that patrons use to select among ethnomedical specialists when they become seriously ill, such as efficacy, religious identity, and/or interpersonal trust, and their cultural models of medical treatments.
+
+The population we examined is currently undergoing substantial cultural and economic transitions that resemble the ``acculturation'' of Study 1, including relatively recent introductions of hospitals, clinics, and Christian churches. Additionally, we analyzed the extent to which Christianity predicted agreement in the statement that science and religion can conflict with each other, and how individuals' cultural models of how a medical treatment works compared to that of a local ethnomedical specialist. We primarily interviewed laypersons, but also include qualitative data from interviews with three ethnomedical specialists, one of whom also plays a traditional religious role in Maasai culture.
+
+\hypertarget{methods-1}{%
+\subsection{Methods}\label{methods-1}}
+
+Fieldwork occurred in Monduli Juu highlands of northern Tanzania in a Kisongo Maasai village near two market integrated towns, each with shops, weekly markets, churches, and clinics. We conducted semi-structured interviews with key informants and a focus group, allowing us to identify local ethnomedical specialists during preliminary stages of fieldwork, and to establish the widespread perceptions about the hospitals and clinics, the church, and the traditional religious healer (the \emph{laibon}) among the community. Key informants included Christian and non-Christian (``traditional'') community leaders, locally salient ethnomedical specialists, and one of the several laibon healers in the region.
+
+We conducted structured and semi-structured interviews with 84 Maasai adults in Monduli Juu (35\% female) about their religious beliefs, trustworthiness of local religious figures, and on whom they rely to help them with a serious illness. To assess the criteria patrons use to select a specialist for medical assistance, we asked participants to list (1) who they would seek first for assistance if they experienced a serious illness, (2) who they would seek second if their conditions did not improve after seeking the first, and (3) who they would seek third if their conditions did not improve after seeking the second (many participants did not have a response to the third option). Responses to each of the foregoing questions were categorized as family, friends, a laibon (traditional healer), a church leader, a clinic/hospital, or themselves. We followed this with a series of questions about participants' religious identities; who they rely on most for spiritual advice; whether or not they trust the local church leadership, laibon healers, and doctors working at the clinic; and how frequently they attend church services.
+
+To address the question of science and religion as separate or competing ideologies, we asked participants whether or not scientific ideas ever conflicted with their religious beliefs. If they confirmed that it did, we asked them to expand on their response with an example.
+
+Finally, to examine the recurring abstract and/or ``supernatural'' features of ethnomedical explanations, we asked a subset of 58 participants to identify a common herbal medicinal treatment that they were knowledgeable about, and to explain how it worked against illness. We coded presence/absence of the following response features: \emph{don't know}, \emph{conditions} under which one should take the medicine (e.g., when a person feels chills), \emph{substances} (e.g., blood, vomit), \emph{essences} (e.g., illness is ``driven out'' by expelling a substance), \emph{heat} (e.g., hot tea reducing chills in the body), \emph{anatomy} and/or \emph{physiology} (e.g., citing body parts and organs such as the stomach or kidneys, and/or describing how they interact with the medicine), \emph{preparation} steps required for the medicine, whether or not it requires assistance from a \emph{hospital or specialist}, citing \emph{belief} that it works, and citing that \emph{prayer} helps it work.
+
+Participants were paid 10,000 TZS (about \$4.35) for their participation, and all protocols and survey materials were approved by Washington State University IRB and the Tanzanian Commission for Science and Technology (COSTECH) prior to data collection.
+
+\hypertarget{results-of-semi-structured-surveys-and-field-observations}{%
+\subsection{Results of semi-structured surveys and field observations}\label{results-of-semi-structured-surveys-and-field-observations}}
+
+As we observed during fieldwork, the Maasai have extensive practical knowledge about herbal remedies for common ailments (Heckelsmiller 2015; Roulette et al. 2018). Traditionally, the inexplicable and/or serious illnesses had been brought to the laibon, who plays a role as a healer and diviner in times of uncertainty (Spencer 2004).
+
+More recently in Monduli, missionaries have had collaborative relationships with local community leaders, who have worked toward developing schools, churches, and privately funded clinics. Many clinics are run by physicians affiliated with missionary organizations, and are reputed as the most efficacious available option. Christianity has also seen a relatively recent uptick among locals in the area (Hodgson 2005), a departure from the traditional religious system in which the laibon healer is a trusted source of medical, social, and spiritual advice (Fratkin 2011).
+
+\hypertarget{religious-specialists-the-traditional-laibon-healer-and-the-christian-church}{%
+\subsubsection{Religious specialists: The traditional laibon healer and the Christian church}\label{religious-specialists-the-traditional-laibon-healer-and-the-christian-church}}
+
+The laibon healers, who possess medicinal knowledge learned during apprenticeships with their fathers, still maintain regular clientele for serious illnesses. Laibon healers can only be males from a specific clan, and although they treat illnesses with tinctures and herbs, their knowledge and the contents of their medicines are inherited secrets. The laibon routinely charges a fee for his services. If he cannot help improve an illness then he might refer his client to another laibon or ethnomedical specialist in the region or, in more recent times, to a local clinic.
+
+The laibon is also a diviner who practices clairvoyance. He uses an oracle horn to cast stones and interpret their configurations to guide him while preparing his medicines, gaining insight from \emph{Engai}, the Maasai God. Although Engai has been described as an agent, similar in some ways to monotheistic gods (Hodgson 2005), the laibon likened \emph{Engai} to ``oxygen'' during our interview, explaining that \emph{Engai} is a ``mind'' in the sense that it represents the totality of knowledge.
+
+The participants we interviewed were generally split in their perspectives on the laibon. For some, the laibon can help a person with serious illnesses, but also with bad luck, spiritual quandaries, or lost items. Many know one or more laibon healers through long-standing family friendships, and cite his importance to Maasai traditions. Others, however, distrust the laibon, considering him to be dishonest and insisting that the traditional reliance on him has been replaced by doctors and churches. A few participants were ambivalent, stating that the laibon is untrustworthy but nevertheless can help people when they need it.
+
+Missionaries and church leaders were viewed in a similarly polarizing way. Some people noted that church leaders, local or otherwise, give people moral and spiritual guidance, pray for people to heal when they are ill, and give people hope in times of need. Others see the church as a business, using deceptive practices to collect money and resources. Some also noted that they have had little-to-no contact with, or interest in, the churches in the area.
+
+The doctors employed at clinics are described in neutral to positive terms, with many interviewees stating that local clinicians are highly knowledgeable, trained, and experienced. Some described the trustworthiness and efficacy of clinicians in terms of their past experiences at clinics, where a doctor helped them improve after a serious illness or injury. Others were unsure what to believe about clinicians because they never went to the clinic, and preferred the laibon healers, friends, and the local ethnomedical specialists with whom they were familiar.
+
+\hypertarget{ethnomedical-specialists-in-monduli-juu}{%
+\subsubsection{Ethnomedical specialists in Monduli Juu}\label{ethnomedical-specialists-in-monduli-juu}}
+
+The overwhelming consensus among key informants was that most clinics are the safe option for treating serious illnesses. In the rural areas of Monduli Juu, where fieldwork occurred, clinic access is often restricted by costs and travel distances, so friends, family, ethnomedical specialists, and laibon healers represent more personal and convenient options.
+
+We interviewed two locally reputable ethnomedical specialists, a younger man nicknamed Daktari Samuel (DS) and a respected older woman named Koko Nasari (KN). (``Daktari'' is Swahili for ``doctor'' and ``Koko'' is Maa, roughly translating to ``grandmother''. ``Samuel'' and ``Nasari'' are pseudonyms.) DS and KN are both locally recognized experts in diagnosing specific illnesses in which they specialize, with DS focusing on herbal remedies for infections and ``systemic'' illnesses, such as cholesterol problems, and KN focusing on injuries and children's health. DS is a local botanical expert who sells herbal medicines, which he grows and procures, for cash. KN treats muscular and gastric pains and general malaise (\emph{ngongu}, or ``evil eye'') with massage, bloodletting, tooth extraction, and minor surgeries, sometimes in exchange for small payments.
+
+Similar to the laibon, each acquired their medicinal knowledge from their parents, but unlike the laibon they do not have formal and traditional titles. Instead, they gain their reputations through popular recognition of useful medicinal knowledge. For most participants, their salient social roles are as trusted friends or family members.
+
+\hypertarget{results-of-the-structured-survey}{%
+\subsection{Results of the structured survey}\label{results-of-the-structured-survey}}
+
+In our sample, 61\% of participants were Christian and 39\% were traditional believers. Most participants (86\%) did not see science and religion as conflicting under any circumstances. While a few did agree that scientific and religious ideas might sometimes conflict (14\%), all of these participants were Christians. See the SI for examples given by these participants.
+
+Participants overwhelmingly preferred to use the clinic in cases of serious illness. Many also preferred to use either friends, family, or religious specialists, such as the laibon and, in some cases, healing through prayer with church leaders. Religious options tended to be chosen mostly when other options failed. Although there was no strong religious disparity among those preferring the clinic as a first or second option, Christians tended to report that they would default to either the church or themselves if the clinic failed, or would not know to whom they should turn. (It is worth noting that help from church leaders often consisted of prayer and counsel rather than medicine.) Conversely, traditional believers often reported that they would turn to friends, family, or a laibon if the clinic failed. Some participants reported that they would seek a laibon first and a clinic second, and these were exclusively traditional (non-Christian) believers. More broadly, while Christians avoided the laibon and favored the church, and traditional believers avoided the church and favored the laibon, both Christians and traditional believers alike reported that they would often favor the clinic when serious diseases arise. See figure \ref{fig:fieldplotillness}.
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/fieldplotillness-1} 
+
+}
+
+\caption{Alluvial plot of the proportions of participants who identified different types of specialists as their first (left) to third (right) choices to help them in the case of serious illness. Colors/facets are religious beliefs of the participants.}\label{fig:fieldplotillness}
+\end{figure}
+
+\end{landscape}
+
+We conducted a PCA on the results of our surveys about interpersonal trust, spiritual advice during times of uncertainty, and patronage for serious illnesses, which revealed that participants did not sharply distinguish trust in medical advice from trust in other domains, and that these response patterns were at least partly split along lines of religious identity. Traditional believers were more likely to rely on the laibon for a serious illness, to personally trust the laibon, and to rely on him for spiritual advice. On the other hand, Christians were more associated with trusting church leadership, relying on elders for spiritual advice, attending church services, and soliciting help from the clinic for serious illnesses (figure \ref{fig:fieldplotlaibonPCA}).
+
+\begin{landscape}
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/fieldplotlaibonPCA-1} 
+
+}
+
+\caption{PC1 values from the PCA of surveys about interpersonal trust, spiritual advice, and patronage for serious illnesses. A: PC1 values for each participant, colored by participant religious identity. B: PCA loadings plot with loadings on PC1 showing general trust in the laibon healer (higher PC1 values) and general trust in the church and elders (lower PC1 values).}\label{fig:fieldplotlaibonPCA}
+\end{figure}
+
+\end{landscape}
+
+\hypertarget{explanations-of-how-herbal-medicines-work}{%
+\subsubsection{Explanations of how herbal medicines work}\label{explanations-of-how-herbal-medicines-work}}
+
+We asked a subset of 58 participants to identify and explain how a common herbal medicinal treatment works. Their explanations largely fell into three groups: participants either (1) stated that they did not know how it worked, but only \emph{that} it worked; (2) stated that they only knew the conditions under which one should take it while listing the steps to prepare the medicine, and/or citing ``belief'' that it works or that they pray it will work; and (3) explained the mechanisms in terms of substances, essences, heat, and/or anatomy and physiology. See figure \ref{fig:fieldplotCausalExp} and the SI for PCA results.
+
+\begin{figure}[p]
+
+{\centering \includegraphics{magic-healers-article2_files/figure-latex/fieldplotCausalExp-1} 
+
+}
+
+\caption{Heatmap visualizing the coded dataset based on presence (light cells) vs. absence (dark cells) of response features in participant explanations of how common herbal medicines work. Each row represents a variable and each column represents a single participant. Rows and columns were ordered using the PCA angle seriation method.}\label{fig:fieldplotCausalExp}
+\end{figure}
+
+\hypertarget{discussion-of-study-2}{%
+\subsection{Discussion of Study 2}\label{discussion-of-study-2}}
+
+Our survey of Tanzanian Maasai pastoralists, in a setting where cultural and economic changes include recent influxes of Christianity and clinics (``acculturation''), had two primary goals.
+
+Our first goal was to investigate the criteria that patrons use to select an ethnomedical specialist when they become seriously ill (e.g., efficacy, interpersonal trust, religious identity). Most participants preferred to use the clinic when seriously ill, which was described as the most efficacious option among most key informants and participants. Participants who trusted the doctors from clinics largely cited their past experiences with treatment, despite their generally impersonal relationships with the doctors who work there. Others preferred to rely on friends, family, and religious leaders who they personally trusted, and who, in contrast to the clinics and hospitals, were conveniently nearby. Preferences for the clinic appeared to be mostly independent of religious affiliation, but religious identity became relevant if a non-religious option, such as the clinic, were to fail (figure \ref{fig:fieldplotillness}.
+
+These results elaborate on the ``patronage'' variables of Study 1 (based on efficacy vs.~socioeconomic considerations): although expected efficacy from ethnomedical specialists was important, this preference was at least partly constrained by social considerations, such as religious identity and trustworthiness (figure \ref{fig:fieldplotlaibonPCA}, and by economic considerations, such as distance traveled, cost, and accessibility.
+
+Christians often commented that they distrusted the laibon, avoided him, and believed that he deceives people for financial gain. In this way, the Christian perspective of the laibon resembled the ``feared diviner'' of Study 1. On the other hand, traditional believers, who trusted the laibon as an ``efficacious healer'', similarly viewed the local church leadership as untrustworthy. The causal relationship between religious identity and participants' response patterns remains unclear, and future research can further explore whether religious beliefs motivate a preference for some specialists over others, or actual benefits from some specialists are motivating religious commitments to their belief system.
+
+A key idea for the ``market for specialists'' hypothesis is that specialists possess useful knowledge about uncommon and serious illnesses, the value of which is based on the specialist being irreplaceable (Tooby and Cosmides 1996). An example of this would be medical treatments that are ``proprietary'', or secretive knowledge (figure \ref{fig:ehrafmsttaxonomy}). Our qualitative data showed mixed support for this. Consistent with proprietary knowledge, the laibon, a traditionally preferred specialist for treating inexplicable and serious illnesses, declined to explain how he understood his medicines to work, and explained that his knowledge was an inherited family secret. On the other hand, DS and KN openly explained at least some of their treatment methods to clients and interviewers, and nevertheless made livelihoods using their skills.
+
+Our second goal was to investigate the extent to which ``religious'' ideas were distinct from ``scientific'' ones. We found that science vs.~religion was a largely unintuitive distinction for most Maasai participants, and that the few who recognized the distinction (14\%) were exclusively Christians who were able to give specific and familiar examples, such as ``sometimes scientists say there is no god, which I disagree with'' (see the SI for details).
+
+When we asked laypersons and specialists to explain how medicines worked to heal the body, those who attempted to explain the underlying processes almost uniformly responded in terms of abstract forces that were not ``religious'' -- with the exception of a few people saying that they would pray for an improved condition (figure \ref{fig:fieldplotCausalExp}). Instead, common illnesses were explainable in abstract terms that do not clearly resemble the ``supernatural'', and although religious behaviors (e.g., prayer) were sometimes advocated as potentially helpful for the medicines' effectiveness, they were rarely invoked as a component of its explanation (Tucker et al. 2015). More serious illnesses were associated with patronage to a clinic or specialist rather than self-care.
+
+The main exception to this pattern was the ``religious'' laibon healer, who used clairvoyance from \emph{Engai} and divination with an oracle horn, to deal with inexplicable illnesses. Nevertheless, the degree to which the laibon's ``supernatural'' concept of Engai is simply an abstract metaphor is less obvious, suggested by his description of Engai as an ethereal force whose ``mental'' properties are akin to a totality of knowledge (see also Evans-Pritchard 1953). Future research could therefore benefit from questioning the extent to which ``religious'' concepts that appear patently supernatural (e.g., Engai, or ``god'', as an agent) are, in fact, at least partly overlapping with abstract but naturalistic metaphors (e.g., Engai, or an ``ethereal force'', representing the totality of knowledge).
+
+\hypertarget{general-discussion}{%
+\section{General Discussion}\label{general-discussion}}
+
+Influential models of cultural evolution emphasize the transmission of important skills, such as tool manufacture or food preparation, that are frequently used by most members of the population (Boyd et al. 2011; Henrich 2016). This view corresponds to one of the three main branches of our MST, the ``prestigious teachers'' (figure \ref{fig:ehrafmsttaxonomy}).
+
+Yet the ethnographic record is replete with descriptions of knowledge specialists, such as shamans and healers, who have proprietary knowledge that they use to solve uncommon and serious problems, such as illnesses. An individual's expected benefit of mastering solutions to rare problems might be low: By definition, the problem might rarely or never arise, and building and maintaining expertise can be costly. In a large population, rare and serious problems will nevertheless occur to someone, so there will be demand for knowledge specialists who can solve those problems (Sugiyama and Sugiyama 2004).
+
+As studies 1 and 2 suggest, ethnomedical specialists often provide practical solutions to unobservable and uncertain problems for payments (see also Lightner et al. (2021)), and clients largely base their patronage on efficacious outcomes (figures \ref{fig:ehrafincentivesPlot}A and \ref{fig:fieldplotillness}). Indeed, we sometimes even observed clients deferring to specialists they did not necessarily trust (figure \ref{fig:ehrafincentivesPlot}B). Ethnomedical specialists can benefit by gaining a clientele that is willing to exchange payment for services such as diagnoses and treatments, whereas clients benefit by outsourcing these tasks instead of acquiring expertise of their own (Hagen and Garfield 2019). This view corresponds to a second major branch of our MST, the ``efficacious healers'' (figure \ref{fig:ehrafmsttaxonomy}).
+
+This is not to suggest that other considerations are unimportant, such as prestige, social norms, and convenience (which we referred to as socioeconomic factors; see figure \ref{fig:ehrafTotalEvidence}). On the contrary, Maasai participants often preferred nearby family and friends over clinics for treating illnesses, and preferences for religious figures were aligned with religious beliefs and trustworthiness (figure \ref{fig:fieldplotlaibonPCA}). We also saw support for this pluralistic approach to client preferences among specialists in the ethnographic data, where clients would primarily select a specialist based on their efficacy, among other socioeconomic considerations (figure \ref{fig:ehrafincentivesPlot}).
+
+These points echo an important caveat about markets, namely, that transaction costs (e.g., energetic requirements, information scarcity) constrain efficient market dynamics (North 1990; Ensminger 1992). Such considerations might help understand why some Maasai participants often preferred family and religious figures over clinicians that they never met, and why we saw a similar trend in the ethnographic data.
+
+\hypertarget{religious-and-non-religious-ethnomedical-specialists}{%
+\subsection{Religious and non-religious ethnomedical specialists}\label{religious-and-non-religious-ethnomedical-specialists}}
+
+Specialized knowledge typically comprises a combination of what Western scholars would characterize as ``scientific'' and ``supernatural'' or ``religious'' concepts. One view of the religious and supernatural services provided by specialists is that they are credible displays that serve to convince observers that the specialists can control unobservable forces (Henrich 2009; Singh 2018). This view corresponds to a third branch of our MST, the ``feared diviners'' (figure \ref{fig:ehrafmsttaxonomy}).
+
+Nevertheless, ethnomedical specialists (``efficacious healers'') were often ``religious'', and the ``supernatural'' and ``religious leader'' nodes were equally close to each of the three major branches of the MST (figure \ref{fig:ehrafmsttaxonomy}). One possible interpretation of these results is that religiosity somehow benefit the client. Shamans and similar healers routinely dispense herbal medicines with accompanying rituals, and these rituals might serve supplementary social functions (Winkelman 2010) or even enhance the efficacy of the substances consumed by a client. Shamans often assist with ailments that are accompanied by psychological stress and its associated symptoms, which are amenable to placebo-effect treatment (McClenon 1997; Sosis 2007). Indeed, this is consistent with findings in study 1, where specialists sometimes used costly and religious rituals, and study 2, where prayer and religious figures were important parts of dealing with serious illness.
+
+Another possibility is that a specialist's ``supernatural'' concepts represent folk intuitions about unobservable or abstract scientific kinds, such as germs, life, chance, or minds (Siegal 2002; Gottlieb 2004; Howell 2012). For example, although modern medicine has delivered incredibly detailed and rigorous bodies of knowledge about viruses and bacteria, Western educated laypersons nevertheless tend to possess vague concepts of disease-causing agents that might appear magical or superstitious (Rozin et al. 1986; Keil et al. 1999; Legare et al. 2012). This is consistent with the idea that categorization of the ``supernatural'' vs.~the ``natural'' requires interpretation by ethnographers and readers, which are built from a culturally contingent (often Western) framework (Sperber 1985) that is based on an \emph{a priori} separation of science and religion.
+
+According to this view, ``religious'' and ``supernatural'' are not only polythetic terms, but arguably ethnocentric descriptions of a variety of unrelated phenomena (Engler and Miller 2004; Bloch 2008; Schilbrack 2010; Sperber 2018). How, for example, should bodily humors, spiritual essences, or magical contagion be disentangled from Western folk theories about life, consciousness, or transmissible illnesses? In the text records in study 1, ``natural'' concepts, e.g., about plants, animals, and physical injuries, frequently co-occurred with supernatural ones (supernatural+natural: 49\%, supernatural only 25\%, natural only 21\%). In study 2, a separation of science and religion was only observed among Christians, i.e., those who were familiar with this institutional conflict that is arguably idiosyncratic among Western societies.
+
+\hypertarget{how-does-acculturation-impact-a-market-for-specialists}{%
+\subsection{How does acculturation impact a market for specialists?}\label{how-does-acculturation-impact-a-market-for-specialists}}
+
+When markets for specialists expand to accommodate new ideas that did not traditionally exist (acculturation), both studies suggested a higher frequency of patronage based on efficacy, and a lower frequency of reliance on supernatural knowledge and/or religious specialists (figures \ref{fig:ehrafAcculturation} and \ref{fig:fieldplotillness}).
+
+For clients, we interpret these outcomes as a result of an expanded market for specialists: more options beget a more competitive market. All else equal, clients can ``shop around'' for more efficacious specialists with proven track records and reliable bodies of knowledge, such as clinic-trained physicians. A specialist's value is largely based on how rare, consequential, and hard-to-replace that specialist's services are (Tooby and Cosmides 1996), so acculturation linked to newly efficacious alternatives (e.g., clinics) can undermine the high market share that an ethnomedical specialist might have traditionally had, prior to acculturation.
+
+\hypertarget{limitations}{%
+\subsection{Limitations}\label{limitations}}
+
+Our study has some important limitations. In study 1, data are based on ethnographic descriptions, so absence of evidence should not be interpreted as evidence of absence. Ethnographers often write about subjects they deem relevant for their own purposes, which did not generally align with our own questions. Moreover, our very critique of the distinction between supernatural vs.~natural concepts was linked to a methodological challenge in study 1, i.e., we lacked precise definitional principles for interpreting supernatural descriptions. To address this, ADL and CH carefully and independently coded each text record before deliberating about each discrepancy thereafter. (See the SI for coding details.)
+
+In studies 1 and 2, we presented our hypotheses and tests with a working assumption that specialists have high levels of knowledge compared to clients. There is some truth to this assumption, especially where medicinal knowledge is kept secret (Lightner et al. 2021), but expertise is often distributed among multiple specialists with varying levels of knowledge and types of specialization, i.e., a division of cognitive labor (Hutchins 2000; Keil 2003; Heintz 2013). For example, it is unclear whether or not a Maasai participant's group of neighbors and family members, who we interpret as the convenient option, are collectively more knowledgeable about a local illness than a single laibon or local physician. These friends and family were often not explicitly identified by participants in figure \ref{fig:fieldplotillness}, and might have even included more ``informal'' ethnomedical specialists.
+
+Finally, preferences in study 2 were clearly aligned with participants' religious beliefs and trust in religious figures, but the causal direction of these relationships are less clear. Do culturally transmitted beliefs about trusting the laibon and adhering to traditional Maasai religion lead to a preference for the laibon as a healer? Or rather, do these preferences mostly arise from incentives derived from past and beneficial experiences with the laibon resolving practical problems, leading religious commitments to follow? Our findings are consistent with the latter, but the notion that these religious alternatives are solely based on efficacy, rather than norms, prestige, or trust, is a strong claim that our study cannot make. Credibility-enhancing displays, and exploitation more generally, probably play a role in explaining supernatural concepts in ethnomedicine. This broader question about the ideational vs.~material nature of culture is pervasive in anthropology (McGee and Warms 2003).
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+This study investigated the extent to which ethnomedical specialists provide ``religious'' medicinal services to laypersons in traditional, non-Western societies, and why laypersons find such approaches convincing. Using cross-cultural data from the eHRAF (study 1) and field data among Tanzanian Maasai pastoralists (study 2), we tested the hypothesis that ethnomedical specialists are ``religious'' specialists who possess efficacious knowledge about uncommon and serious illnesses. We found that ethnomedical specialists are frequently religious figures who use ``supernatural'' concepts while fulfilling a practical and specialized service for their clients. Levels of evidence for supernatural theories of disease increased with pathogen stress, proximity to the equator, and lower reliance on market economies, and were more associated with infections and mental illness compared to physical injuries and childbirth. We therefore hypothesize that ``religious'' beliefs among traditional healers might often, but not always, represent abstract thinking about rare phenomena whose causes are unobservable, rather than a separate ``religious'' style of thinking. Our cross-cultural data revealed a taxonomy of ethnomedical specialists, suggesting that while some religious figures who assist with medical problems, such as shamans, might be ``feared diviners'' or ``prestigious mentors'', many are ``efficacious healers'' who possess technical knowledge allowing them to exchange efficacious services to clients for various forms of payment.
+
+\hypertarget{funding}{%
+\section{Funding}\label{funding}}
+
+Funding for this study was from the Evolution of Science and Religion as Meaning-Making Systems project of the Issachar Fund and Templeton Religion Trust, and from a National Science Foundation Doctoral Dissertation Improvement Grant, award number 1918523.
+
+\hypertarget{conflicts-of-interestcompeting-interests}{%
+\section{Conflicts of interest/Competing interests}\label{conflicts-of-interestcompeting-interests}}
+
+The authors declare none.
+
+\hypertarget{availability-of-data-and-materials}{%
+\section{Availability of data and materials}\label{availability-of-data-and-materials}}
+
+All data, code, and supplementary materials are available at: \url{https://github.com/alightner/ethnomedicine-magic}.
+
+\hypertarget{author-contributions}{%
+\section{Author contributions}\label{author-contributions}}
+
+ADL and EHH designed the study. ADL collected the cross-cultural data. ADL and CH coded the cross-cultural data and collected the field data. ADL and EHH analyzed the data. ADL wrote the first draft of the paper. ADL and EHH wrote the final draft of the paper. All authors read and approved the final draft of the paper.
+
+\hypertarget{acknowledgements}{%
+\section{Acknowledgements}\label{acknowledgements}}
+
+We especially thank the Maasai people of Eluwai who participated in the field study. We are also grateful to Musa Kamaika, Kotoke Ngilepoi, and one anonymous Maasai research assistant for their help during fieldwork. We thank members of the Evolution of Science and Religion as Meaning-Making Systems project seminar and the Hagen Bioanthropology Lab for helpful feedback during the development of this study. We also thank Anne Pisor for many helpful comments that improved this manuscript.
+
+\hypertarget{references}{%
+\section*{References}\label{references}}
+\addcontentsline{toc}{section}{References}
+
+\hypertarget{refs}{}
+\leavevmode\hypertarget{ref-andritzkySociopsychotherapeuticFunctionsAyahuasca1989}{}%
+Andritzky, Walter. 1989. ``Sociopsychotherapeutic Functions of Ayahuasca Healing in Amazonia.'' \emph{Journal of Psychoactive Drugs} 21(1):77--89. doi: \href{https://doi.org/10.1080/02791072.1989.10472145}{10.1080/02791072.1989.10472145}.
+
+\leavevmode\hypertarget{ref-atran2002gods}{}%
+Atran, Scott. 2002. \emph{In Gods We Trust: The Evolutionary Landscape of Religion}. Oxford University Press.
+
+\leavevmode\hypertarget{ref-atranNativeMindCultural2008}{}%
+Atran, Scott, and Douglas L. Medin. 2008. \emph{The Native Mind and the Cultural Construction of Nature}. Cambridge, Mass: MIT Press.
+
+\leavevmode\hypertarget{ref-barbourIssuesScienceReligion1966}{}%
+Barbour, Ian G. 1966. \emph{Issues in Science and Religion}. Prentice-Hall.
+
+\leavevmode\hypertarget{ref-berlinMedicalEthnobiologyHighland2015}{}%
+Berlin, Elois, and Brent Berlin. 2015. \emph{Medical Ethnobiology of the Highland Maya of Chiapas, Mexico}.
+
+\leavevmode\hypertarget{ref-blackwellShamanismEfficaciousExceptionalism2018}{}%
+Blackwell, Aaron D., and Benjamin Grant Purzycki. 2018. ``Shamanism and Efficacious Exceptionalism.'' \emph{The Behavioral and Brain Sciences} 41:e69. doi: \href{https://doi.org/10.1017/S0140525X1700200X}{10.1017/S0140525X1700200X}.
+
+\leavevmode\hypertarget{ref-bloch2008religion}{}%
+Bloch, Maurice. 2008. ``Why Religion Is Nothing Special but Is Central.'' \emph{Philosophical Transactions of the Royal Society B: Biological Sciences} 363(1499):2055--61.
+
+\leavevmode\hypertarget{ref-boydCulturalNicheWhy2011}{}%
+Boyd, R., P. J. Richerson, and J. Henrich. 2011. ``The Cultural Niche: Why Social Learning Is Essential for Human Adaptation.'' \emph{Proceedings of the National Academy of Sciences} 108(Supplement\_2):10918--25. doi: \href{https://doi.org/10.1073/pnas.1100290108}{10.1073/pnas.1100290108}.
+
+\leavevmode\hypertarget{ref-boyerMindsMakeSocieties2018}{}%
+Boyer, Pascal. 2018. \emph{Minds Make Societies: How Cognition Explains the World Humans Create}. 1st Edition edition. New Haven ; London: Yale University Press.
+
+\leavevmode\hypertarget{ref-boyer2020informal}{}%
+Boyer, Pascal. 2020. ``Informal Religious Activity Outside Hegemonic Religions: Wild Traditions and Their Relevance to Evolutionary Models.'' \emph{Religion, Brain \& Behavior} 10(4):459--72.
+
+\leavevmode\hypertarget{ref-boyerEvolutionaryPerspectivesReligion2008}{}%
+Boyer, Pascal, and Brian Bergstrom. 2008. ``Evolutionary Perspectives on Religion.'' \emph{Annual Review of Anthropology} 37(1):111--30. doi: \href{https://doi.org/10.1146/annurev.anthro.37.081407.085201}{10.1146/annurev.anthro.37.081407.085201}.
+
+\leavevmode\hypertarget{ref-carruthersCognitiveBasisScience2002}{}%
+Carruthers, Peter, Stephen Stich, and Michael Siegal, eds. 2002. \emph{The Cognitive Basis of Science}. Cambridge: Cambridge University Press.
+
+\leavevmode\hypertarget{ref-chwe2013rational}{}%
+Chwe, Michael Suk-Young. 2013. \emph{Rational Ritual: Culture, Coordination, and Common Knowledge}. Princeton University Press.
+
+\leavevmode\hypertarget{ref-conklin1980folk}{}%
+Conklin, Harold C. 1980. ``Folk Classification: A Topically Arranged Bibliography of Contemporary and Background References Through 1971: Revised Reprinting with Author Index.''
+
+\leavevmode\hypertarget{ref-coyneFaithFactWhy2016}{}%
+Coyne, Jerry A. 2016. \emph{Faith Versus Fact: Why Science and Religion Are Incompatible}. Reprint edition. Penguin Books.
+
+\leavevmode\hypertarget{ref-dennett2006breaking}{}%
+Dennett, Daniel Clement. 2006. \emph{Breaking the Spell: Religion as a Natural Phenomenon}. Vol. 14. Penguin.
+
+\leavevmode\hypertarget{ref-draperHistoryConflictReligion2009}{}%
+Draper, John William. 2009. \emph{History of the Conflict Between Religion and Science}. Cambridge: Cambridge University Press.
+
+\leavevmode\hypertarget{ref-eliadeShamanismArchaicTechniques2004}{}%
+Eliade, Mircea, Willard R. Trask, and Wendy Doniger. 2004. \emph{Shamanism: Archaic Techniques of Ecstasy}. Later Reprint edition. Princeton, NJ: Princeton University Press.
+
+\leavevmode\hypertarget{ref-englerReviewSymposiumDaniel2004}{}%
+Engler, Steven, and Dean Miller. 2004. \emph{Review Symposium Daniel Dubuisson, the Western Construction of Religion}.
+
+\leavevmode\hypertarget{ref-ensmingerMakingMarketInstitutional1992}{}%
+Ensminger, Jean. 1992. \emph{Making a Market: The Institutional Transformation of an African Society}. Cambridge England ; New York: Cambridge University Press.
+
+\leavevmode\hypertarget{ref-ericksonEthnomedicine2007}{}%
+Erickson, Pamela I. 2007. \emph{Ethnomedicine}. 1st edition. Long Grove, Ill: Waveland Pr Inc.
+
+\leavevmode\hypertarget{ref-evans-pritchardNuerDescriptionModes1940}{}%
+Evans-Pritchard, E. E. 1940. \emph{The Nuer: A Description of the Modes of Livelihood and Political Institutions of a Nilotic People}. Oxford: Clarendon Press.
+
+\leavevmode\hypertarget{ref-evans-pritchardNuerConceptionSpirit1953}{}%
+Evans-Pritchard, E. E. 1953. ``The Nuer Conception of Spirit in Its Relation to the Social Order.'' \emph{American Anthropologist} 55(2):201--14. doi: \href{https://doi.org/10.1525/aa.1953.55.2.02a00050}{10.1525/aa.1953.55.2.02a00050}.
+
+\leavevmode\hypertarget{ref-evans-pritchardWitchcraftOraclesMagic1976}{}%
+Evans-Pritchard, E. E., and Eva Gillies. 1976. \emph{Witchcraft, Oracles, and Magic Among the Azande}. Abridged with an introd. by Eva Gillies. Oxford: Clarendon Press.
+
+\leavevmode\hypertarget{ref-fosterEvolutionSuperstitiousSuperstitionlike2009}{}%
+Foster, Kevin R., and Hanna Kokko. 2009. ``The Evolution of Superstitious and Superstition-Like Behaviour.'' \emph{Proceedings of the Royal Society B: Biological Sciences} 276(1654):31--37. doi: \href{https://doi.org/10.1098/rspb.2008.0981}{10.1098/rspb.2008.0981}.
+
+\leavevmode\hypertarget{ref-fratkinLaibonAnthropologistJourney2011}{}%
+Fratkin, Elliot. 2011. \emph{Laibon: An Anthropologist's Journey with Samburu Diviners in Kenya}. Lanham, Md: AltaMira Press.
+
+\leavevmode\hypertarget{ref-frazerGoldenBoughStudy2003}{}%
+Frazer, James George. 1890. \emph{The Golden Bough: A Study of Magic and Religion}.
+
+\leavevmode\hypertarget{ref-funkReligionScienceHighly2015}{}%
+Funk, Cary, and Becka Alper. 2015. \emph{Religion and Science: Highly Religious Americans Are Less Likely Than Others to See Conflict Between Faith and Science.} Pew Research Center Science \& Society.
+
+\leavevmode\hypertarget{ref-garfieldEvolutionaryModelsLeadership2019}{}%
+Garfield, Zachary H., Robert L. Hubbard, and Edward H. Hagen. 2019. ``Evolutionary Models of Leadership.'' \emph{Human Nature} 30(1):23--58. doi: \href{https://doi.org/10.1007/s12110-019-09338-4}{10.1007/s12110-019-09338-4}.
+
+\leavevmode\hypertarget{ref-gillispie1996genesis}{}%
+Gillispie, Charles Coulston. 1996. \emph{Genesis and Geology: A Study in the Relations of Scientific Thought, Natural Theology, and Social Opinion in Great Britain, 1790-1850}. Harvard University Press.
+
+\leavevmode\hypertarget{ref-glowackiEmergenceLocallyAdaptive2020}{}%
+Glowacki, Luke. 2020. ``The Emergence of Locally Adaptive Institutions: Insights from Traditional Social Structures of East African Pastoralists.'' \emph{Biosystems} 198:104257. doi: \href{https://doi.org/10.1016/j.biosystems.2020.104257}{10.1016/j.biosystems.2020.104257}.
+
+\leavevmode\hypertarget{ref-gmelchBaseballMagic1971}{}%
+Gmelch, George. 1971. ``Baseball Magic.'' \emph{Trans-Action} 8(8):39--41. doi: \href{https://doi.org/10.1007/BF02908325}{10.1007/BF02908325}.
+
+\leavevmode\hypertarget{ref-gottliebAfterlifeWhereWe2004}{}%
+Gottlieb, Alma. 2004. \emph{The Afterlife Is Where We Come from: The Culture of Infancy in West Africa}. 1st edition. Chicago: University of Chicago Press.
+
+\leavevmode\hypertarget{ref-gouldRocksAgesScience2011}{}%
+Gould, Stephen Jay. 2011. \emph{Rocks of Ages: Science and Religion in the Fullness of Life.} New York: Random House US.
+
+\leavevmode\hypertarget{ref-guthrieFacesCloudsNew1995}{}%
+Guthrie, Stewart Elliott. 1995. \emph{Faces in the Clouds: A New Theory of Religion}. 1st edition. New York: Oxford University Press USA.
+
+\leavevmode\hypertarget{ref-hagenLeadershipPrestigeMothering2019}{}%
+Hagen, Edward H., and Zachary Garfield. 2019. \emph{Leadership and Prestige, Mothering, Sexual Selection, and Encephalization: The Computational Services Model}. \emph{Preprint}. Open Science Framework.
+
+\leavevmode\hypertarget{ref-heckelsmillerKituritoEngurumaaWe2015}{}%
+Heckelsmiller, Cynthiann. 2015. ``Kiturito Engurumaa, We Are Digging Shambas Now:'' Incorporating Plant Foods into Maasai Pastoral Culture.'' PhD thesis, University of Kent.
+
+\leavevmode\hypertarget{ref-heintzScientificCognitionCultural2007}{}%
+Heintz, C. 2007. ``Scientific Cognition and Cultural Evolution: Theoretical Tools for Integrating Social and Cognitive Studies of Science.'' \emph{Unpublished Doctoral Dissertation). Ecole Des Hautes Etudes En Sciences Sociales, Paris}.
+
+\leavevmode\hypertarget{ref-heintzIntroductionWhyThere2004}{}%
+Heintz, Christophe. 2004. ``Introduction: Why There Should Be a Cognitive Anthropology of Science.'' \emph{Journal of Cognition and Culture} 4(3-4):391--408.
+
+\leavevmode\hypertarget{ref-heintzScaffoldingCoreCognition2013}{}%
+Heintz, Christophe. 2013. ``Scaffolding on Core Cognition.'' \emph{Developing Scaffolds in Evolution, Culture and Cognition} 209--28.
+
+\leavevmode\hypertarget{ref-henrichEvolutionConformistTransmission1998}{}%
+Henrich, J., and R. Boyd. 1998. ``The Evolution of Conformist Transmission and the Emergence of Between-Group Differences.'' \emph{Evolution and Human Behavior} 19(4):215--41.
+
+\leavevmode\hypertarget{ref-henrichEvolutionCostlyDisplays2009}{}%
+Henrich, Joseph. 2009. ``The Evolution of Costly Displays, Cooperation and Religion: Credibility Enhancing Displays and Their Implications for Cultural Evolution.'' \emph{Evolution and Human Behavior} 30(4):244--60. doi: \href{https://doi.org/10.1016/j.evolhumbehav.2009.03.005}{10.1016/j.evolhumbehav.2009.03.005}.
+
+\leavevmode\hypertarget{ref-henrichEvolutionPrestigeFreely2001}{}%
+Henrich, Joseph, and Francisco J. Gil-White. 2001. ``The Evolution of Prestige: Freely Conferred Deference as a Mechanism for Enhancing the Benefits of Cultural Transmission.'' \emph{Evolution and Human Behavior} 22(3):165--96. doi: \href{https://doi.org/10.1016/S1090-5138(00)00071-4}{10.1016/S1090-5138(00)00071-4}.
+
+\leavevmode\hypertarget{ref-henrichSecretOurSuccess2016}{}%
+Henrich, Joseph Patrick. 2016. \emph{The Secret of Our Success: How Culture Is Driving Human Evolution, Domesticating Our Species, and Making Us Smarter}. Princeton: Princeton University Press.
+
+\leavevmode\hypertarget{ref-hodgsonChurchWomenGendered2005}{}%
+Hodgson, Dorothy Louise. 2005. \emph{The Church of Women: Gendered Encounters Between Maasai and Missionaries}. Bloomington: Indiana University Press.
+
+\leavevmode\hypertarget{ref-howell2012knowledge}{}%
+Howell, Signe. 2012. ``Knowledge, Morality, and Causality in a'Luckless' Society: The Case of the Chewong in the Malaysian Rain Forest.'' \emph{Social Analysis} 56(1):133--47.
+
+\leavevmode\hypertarget{ref-hutchinsCognitionWild2000}{}%
+Hutchins, Edwin. 2000. \emph{Cognition in the Wild}. Nachdr. Cambridge, Mass: MIT Press.
+
+\leavevmode\hypertarget{ref-jaiswalGlimpseAyurvedaForgotten2016}{}%
+Jaiswal, Yogini S., and Leonard L. Williams. 2016. ``A Glimpse of Ayurveda the Forgotten History and Principles of Indian Traditional Medicine.'' \emph{Journal of Traditional and Complementary Medicine} 7(1):50--53. doi: \href{https://doi.org/10.1016/j.jtcme.2016.02.002}{10.1016/j.jtcme.2016.02.002}.
+
+\leavevmode\hypertarget{ref-jamesVarietiesReligiousExperience2009}{}%
+James, William. 1902. \emph{The Varieties of Religious Experience: A Study in Human Nature}. Lexington, KY: CreateSpace Independent Publishing Platform.
+
+\leavevmode\hypertarget{ref-keilFolkscienceCoarseInterpretations2003}{}%
+Keil, Frank C. 2003. ``Folkscience: Coarse Interpretations of a Complex Reality.'' \emph{Trends in Cognitive Sciences} 7(8):368--73. doi: \href{https://doi.org/10.1016/S1364-6613(03)00158-X}{10.1016/S1364-6613(03)00158-X}.
+
+\leavevmode\hypertarget{ref-keilMechanismExplanationDevelopment1999}{}%
+Keil, Frank C., Daniel T. Levin, Bethany A. Richman, and Grant Gutheil. 1999. ``Mechanism and Explanation in the Development of Biological Thought: The Case of Disease.'' Pp. 285--319 in \emph{Folkbiology}. Cambridge, MA, US: The MIT Press.
+
+\leavevmode\hypertarget{ref-kelemen2004children}{}%
+Kelemen, Deborah. 2004. ``Are Children `Intuitive Theists'? Reasoning About Purpose and Design in Nature.'' \emph{Psychological Science} 15(5):295--301.
+
+\leavevmode\hypertarget{ref-kirbyDPLACEGlobalDatabase2016}{}%
+Kirby, Kathryn R., Russell D. Gray, Simon J. Greenhill, Fiona M. Jordan, Stephanie Gomes-Ng, Hans-Jörg Bibiko, Damián E. Blasi, Carlos A. Botero, Claire Bowern, Carol R. Ember, Dan Leehr, Bobbi S. Low, Joe McCarter, William Divale, and Michael C. Gavin. 2016. ``D-PLACE: A Global Database of Cultural, Linguistic and Environmental Diversity'' edited by A. Mesoudi. \emph{PLOS ONE} 11(7):e0158391. doi: \href{https://doi.org/10.1371/journal.pone.0158391}{10.1371/journal.pone.0158391}.
+
+\leavevmode\hypertarget{ref-lansingEmergentPropertiesBalinese1993}{}%
+Lansing, J. Stephen, and James N. Kremer. 1993. ``Emergent Properties of Balinese Water Temple Networks: Coadaptation on a Rugged Fitness Landscape.'' \emph{American Anthropologist} 95(1):97--114.
+
+\leavevmode\hypertarget{ref-legareCoexistenceNaturalSupernatural2012}{}%
+Legare, Cristine H., E. Margaret Evans, Karl S. Rosengren, and Paul L. Harris. 2012. ``The Coexistence of Natural and Supernatural Explanations Across Cultures and Development.'' \emph{Child Development} 83(3):779--93. doi: \href{https://doi.org/10.1111/j.1467-8624.2012.01743.x}{10.1111/j.1467-8624.2012.01743.x}.
+
+\leavevmode\hypertarget{ref-lightnerAcculturationMarketIntegration2021}{}%
+Lightner, Aaron D., and Edward H. Hagen. 2021. ``Acculturation and Market Integration Are Associated with Greater Trust Among Tanzanian Maasai Pastoralists.'' \emph{Evolutionary Human Sciences} 1--33. doi: \href{https://doi.org/10.1017/ehs.2021.10}{10.1017/ehs.2021.10}.
+
+\leavevmode\hypertarget{ref-lightnerConceptualKnowledgeEthnoscientificinreview}{}%
+Lightner, Aaron, Cynthiann Heckelsmiller, and Edward Hagen. 2021. ``Conceptual Knowledge, Ethnoscientific Expertise, and Cultural Transmission: Testing Five Evolutionary Models in 55 Traditional Cultures.'' \emph{Evolutionary Human Sciences}.
+
+\leavevmode\hypertarget{ref-lozadaCulturalTransmissionEthnobotanical2006}{}%
+Lozada, Mariana, Ana Ladio, and Mariana Weigandt. 2006. ``Cultural Transmission of Ethnobotanical Knowledge in a Rural Community of Northwestern Patagonia, Argentina.'' \emph{Economic Botany} 60(4):374--85. doi: \href{https://doi.org/10.1663/0013-0001(2006)60\%5B374:CTOEKI\%5D2.0.CO;2}{10.1663/0013-0001(2006)60{[}374:CTOEKI{]}2.0.CO;2}.
+
+\leavevmode\hypertarget{ref-malinowskiArgonautsWesternPacific1932}{}%
+Malinowski, Bronislaw. 1932. \emph{Argonauts of the Western Pacific}. George Routledge And Sons, Limited.
+
+\leavevmode\hypertarget{ref-mccauleyWhyReligionNatural2013}{}%
+McCauley, Robert N. 2013. \emph{Why Religion Is Natural and Science Is Not}. 1 edition. Oxford University Press.
+
+\leavevmode\hypertarget{ref-mcclenonShamanicHealingHuman1997}{}%
+McClenon, James. 1997. ``Shamanic Healing, Human Evolution, and the Origin of Religion.'' \emph{Journal for the Scientific Study of Religion} 36(3):345--54. doi: \href{https://doi.org/10.2307/1387852}{10.2307/1387852}.
+
+\leavevmode\hypertarget{ref-mcgeeAnthropologicalTheoryIntroductory2003}{}%
+McGee, R. Jon, and Richard Warms. 2003. \emph{Anthropological Theory: An Introductory History}. 3 edition. Boston: McGraw-Hill Humanities/Social Sciences/Languages.
+
+\leavevmode\hypertarget{ref-medinNativeMindBiological2004}{}%
+Medin, Douglas L., and Scott Atran. 2004. ``The Native Mind: Biological Categorization and Reasoning in Development and Across Cultures.'' \emph{Psychological Review} 111(4):960--83. doi: \href{https://doi.org/10.1037/0033-295X.111.4.960}{10.1037/0033-295X.111.4.960}.
+
+\leavevmode\hypertarget{ref-morinHowTraditionsLive2015}{}%
+Morin, Olivier. 2015. \emph{How Traditions Live and Die}. Oxford University Press.
+
+\leavevmode\hypertarget{ref-murdockOutlineCulturalMaterials2006}{}%
+Murdock, George P., CS Ford, AE Hudson, R. Kennedy, LW Simmons, and JW Whiting. 2006. \emph{Outline of Cultural Materials}. New Haven: Human Relations Area Files.
+
+\leavevmode\hypertarget{ref-narollProposedHRAFProbability1967}{}%
+Naroll, Raoul. 1967. ``The Proposed HRAF Probability Sample.'' \emph{Behavior Science Notes} 2(2):70--80.
+
+\leavevmode\hypertarget{ref-needham1975polythetic}{}%
+Needham, Rodney. 1975. ``Polythetic Classification: Convergence and Consequences.'' \emph{Man} 349--69.
+
+\leavevmode\hypertarget{ref-nersessianCreatingScientificConcepts2010}{}%
+Nersessian, Nancy J. 2010. \emph{Creating Scientific Concepts}. MIT press.
+
+\leavevmode\hypertarget{ref-norenzayanBigGodsHow2015}{}%
+Norenzayan, Ara. 2015. \emph{Big Gods: How Religion Transformed Cooperation and Conflict}. Reprint edition. Princeton Oxford: Princeton University Press.
+
+\leavevmode\hypertarget{ref-northInstitutionsInstitutionalChange1990}{}%
+North, Douglass C. 1990. \emph{Institutions, Institutional Change, and Economic Performance}. Cambridge ; New York: Cambridge University Press.
+
+\leavevmode\hypertarget{ref-peoplesHunterGatherersOriginsReligion2016}{}%
+Peoples, Hervey C., Pavel Duda, and Frank W. Marlowe. 2016. ``Hunter-Gatherers and the Origins of Religion.'' \emph{Human Nature} 27(3):261--82. doi: \href{https://doi.org/10.1007/s12110-016-9260-0}{10.1007/s12110-016-9260-0}.
+
+\leavevmode\hypertarget{ref-purzyckiEvolutionGodsMinds2016}{}%
+Purzycki, Benjamin Grant. 2016. ``The Evolution of Gods' Minds in the Tyva Republic.'' \emph{Current Anthropology} 57(S13):S88--S104. doi: \href{https://doi.org/10.1086/685729}{10.1086/685729}.
+
+\leavevmode\hypertarget{ref-rappaportPigsAncestorsRitual1968}{}%
+Rappaport, Roy A. 1968. \emph{Pigs for the Ancestors: Ritual in the Ecology of a New Guinea People}. 1. ed. Long Grove, Ill: Waveland Press.
+
+\leavevmode\hypertarget{ref-richersonNotGenesAlone2005}{}%
+Richerson, Peter J., and Robert Boyd. 2005. \emph{Not by Genes Alone}. Chicago: University of Chicago Press.
+
+\leavevmode\hypertarget{ref-rouletteMedicinalFoodsBeverages2018}{}%
+Roulette, Casey J., Efrem-Fred A. Njau, Marsha B. Quinlan, Robert J. Quinlan, and Douglas R. Call. 2018. ``Medicinal Foods and Beverages Among Maasai Agro-Pastoralists in Northern Tanzania.'' \emph{Journal of Ethnopharmacology} 216:191--202. doi: \href{https://doi.org/10.1016/j.jep.2018.01.022}{10.1016/j.jep.2018.01.022}.
+
+\leavevmode\hypertarget{ref-rozinOperationLawsSympathetic1986}{}%
+Rozin, Paul, Linda Millman, and Carol Nemeroff. 1986. ``Operation of the Laws of Sympathetic Magic in Disgust and Other Domains.'' \emph{Journal of Personality and Social Psychology} 50(4):703--12. doi: \href{https://doi.org/10.1037/0022-3514.50.4.703}{10.1037/0022-3514.50.4.703}.
+
+\leavevmode\hypertarget{ref-schilbrackReligionsAreThere2010}{}%
+Schilbrack, K. 2010. ``Religions: Are There Any?'' \emph{Journal of the American Academy of Religion} 78(4):1112--38. doi: \href{https://doi.org/10.1093/jaarel/lfq086}{10.1093/jaarel/lfq086}.
+
+\leavevmode\hypertarget{ref-shenhavDivineIntuitionCognitive2012}{}%
+Shenhav, Amitai, David G. Rand, and Joshua D. Greene. 2012. ``Divine Intuition: Cognitive Style Influences Belief in God.'' \emph{Journal of Experimental Psychology: General} 141(3):423--28. doi: \href{https://doi.org/10.1037/a0025391}{10.1037/a0025391}.
+
+\leavevmode\hypertarget{ref-siegal200216}{}%
+Siegal, Michael. 2002. ``The Science of Childhood.'' \emph{The Cognitive Basis of Science} 300.
+
+\leavevmode\hypertarget{ref-singerCompanionMedicalAnthropology2011}{}%
+Singer, Merrill, and Pamela I. Erickson, eds. 2011. \emph{A Companion to Medical Anthropology}. 1st edition. Chichester, West Sussex ; Malden, MA: Wiley-Blackwell.
+
+\leavevmode\hypertarget{ref-singhCulturalEvolutionShamanism2018}{}%
+Singh, Manvir. 2018. ``The Cultural Evolution of Shamanism.'' \emph{Behavioral and Brain Sciences} 41. doi: \href{https://doi.org/10.1017/S0140525X17001893}{10.1017/S0140525X17001893}.
+
+\leavevmode\hypertarget{ref-singhMagicExplanationsEvil2021}{}%
+Singh, Manvir. 2021. ``Magic, Explanations, and Evil: The Origins and Design of Witches and Sorcerers.'' \emph{Current Anthropology} 62(1):2--29. doi: \href{https://doi.org/10.1086/713111}{10.1086/713111}.
+
+\leavevmode\hypertarget{ref-singhSelfInterestDesignRules2017}{}%
+Singh, Manvir, Richard Wrangham, and Luke Glowacki. 2017. ``Self-Interest and the Design of Rules.'' \emph{Human Nature} 28(4):457--80. doi: \href{https://doi.org/10.1007/s12110-017-9298-7}{10.1007/s12110-017-9298-7}.
+
+\leavevmode\hypertarget{ref-snyderPhilosophicalBreakfastClub2012}{}%
+Snyder, Laura J. 2012. \emph{The Philosophical Breakfast Club: Four Remarkable Friends Who Transformed Science and Changed the World}. Illustrated edition. New York: Crown.
+
+\leavevmode\hypertarget{ref-sosisMagicoReligiousResponses2007}{}%
+Sosis, Richard. 2007. ``Magico-Religious Responses to Threats of Terror: Magico\&\#x2010;Religious Responses to Threats of Terror.'' \emph{Current Anthropology} 48(6):903--11. doi: \href{https://doi.org/10.1086/523015}{10.1086/523015}.
+
+\leavevmode\hypertarget{ref-sosisSignalingSolidaritySacred2003}{}%
+Sosis, Richard, and Candace Alcorta. 2003. ``Signaling, Solidarity, and the Sacred: The Evolution of Religious Behavior.'' \emph{Evolutionary Anthropology: Issues, News, and Reviews} 12(6):264--74. doi: \href{https://doi.org/10.1002/evan.10120}{10.1002/evan.10120}.
+
+\leavevmode\hypertarget{ref-spencerTimeSpaceUnknown2004}{}%
+Spencer, Paul. 2004. \emph{Time, Space and the Unknown: Maasai Configurations of Power and Providence}. Routledge.
+
+\leavevmode\hypertarget{ref-sperberAnthropologicalKnowledge1985}{}%
+Sperber, Dan. 1985. \emph{On Anthropological Knowledge}. Cambridge University Press.
+
+\leavevmode\hypertarget{ref-sperberCuttingCultureJoints2018}{}%
+Sperber, Dan. 2018. ``Cutting Culture at the Joints?'' \emph{Religion, Brain \& Behavior} 8(4).
+
+\leavevmode\hypertarget{ref-sperberCausalCognitionMultidisciplinary1995}{}%
+Sperber, Dan, David Premack, and Ann James Premack. 1995. \emph{Causal Cognition: A Multidisciplinary Debate}. Clarendon Press Oxford.
+
+\leavevmode\hypertarget{ref-stewardTheoryCultureChange1972}{}%
+Steward, Julian Haynes. 1972. \emph{Theory of Culture Change: The Methodology of Multilinear Evolution}. University of Illinois Press.
+
+\leavevmode\hypertarget{ref-strimlingRepeatedLearningMakes2009}{}%
+Strimling, Pontus, Magnus Enquist, and Kimmo Eriksson. 2009. ``Repeated Learning Makes Cultural Evolution Unique.'' \emph{Proceedings of the National Academy of Sciences} 106(33):13870--4. doi: \href{https://doi.org/10.1073/pnas.0903180106}{10.1073/pnas.0903180106}.
+
+\leavevmode\hypertarget{ref-sugiyamaIllnessInjuryDisability2004}{}%
+Sugiyama, Lawrence S., and Michelle Scalise Sugiyama. 2004. ``Illness, Injury, and Disability Among Shiwiar Forager-Horticulturalists: Implications of Health-Risk Buffering for the Evolution of Human Life History.'' \emph{American Journal of Physical Anthropology} 123(4):371--89. doi: \href{https://doi.org/10.1002/ajpa.10325}{10.1002/ajpa.10325}.
+
+\leavevmode\hypertarget{ref-szollosiPeopleIntuitiveScientists2020}{}%
+Szollosi, Aba, and Ben R. Newell. 2020. ``People as Intuitive Scientists: Reconsidering Statistical Explanations of Decision Making.'' \emph{Trends in Cognitive Sciences} 0(0). doi: \href{https://doi.org/10.1016/j.tics.2020.09.005}{10.1016/j.tics.2020.09.005}.
+
+\leavevmode\hypertarget{ref-thagardMindSocietyBrainsSocial2019}{}%
+Thagard, Paul. 2019. \emph{Mind-Society: From Brains to Social Sciences and Professions (Treatise on Mind and Society)}. Oxford University Press.
+
+\leavevmode\hypertarget{ref-toobyFriendshipBankerParadox1996a}{}%
+Tooby, John, and Leda Cosmides. 1996. ``Friendship and the Banker's Paradox: Other Pathways to the Evolution of Adaptations for Altruism.''
+
+\leavevmode\hypertarget{ref-tucker2015ecological}{}%
+Tucker, Bram, Jaovola Tombo, Patricia Hajasoa, Charlotte Nagnisaha, and others. 2015. ``Ecological and Cosmological Coexistence Thinking in a Hypervariable Environment: Causal Models of Economic Success and Failure Among Farmers, Foragers, and Fishermen of Southwestern Madagascar.'' \emph{Frontiers in Psychology} 6:1533.
+
+\leavevmode\hypertarget{ref-uzarevicPsychologyNonbelievers2020}{}%
+Uzarevic, Filip, and Thomas Joseph Coleman. 2020. \emph{The Psychology of Nonbelievers}. \emph{Preprint}. PsyArXiv.
+
+\leavevmode\hypertarget{ref-weber2009max}{}%
+Weber, Max. 1920. \emph{From Max Weber: Essays in Sociology}. Routledge.
+
+\leavevmode\hypertarget{ref-wilson2010darwin}{}%
+Wilson, David. 2010. \emph{Darwin's Cathedral: Evolution, Religion, and the Nature of Society}. University of Chicago Press.
+
+\leavevmode\hypertarget{ref-winkelmanShamanismBiopsychosocialParadigm2010}{}%
+Winkelman, Michael J. 2010. \emph{Shamanism: A Biopsychosocial Paradigm of Consciousness and Healing, 2nd Edition}. 2nd edition. Santa Barbara, Calif: Praeger.
+
+\leavevmode\hypertarget{ref-winkelmanShamansOtherMagicoReligious1990}{}%
+Winkelman, Michael James. 1990. ``Shamans and Other "Magico-Religious" Healers: A Cross-Cultural Study of Their Origins, Nature, and Social Transformations.'' \emph{Ethos} 18(3):308--52.
+
+\leavevmode\hypertarget{ref-winkelmanCrossculturalStudyMagicoreligious}{}%
+Winkelman, Michael, and Douglas White. 1987. ``A Cross-Cultural Study of Magico-Religious Practitioners and Trance States: Database.'' \emph{Human Relations Area Files}.
+
+\leavevmode\hypertarget{ref-youngMagicQuasiProfessionOrganization1975}{}%
+Young, Allan. 1975. ``Magic as a "Quasi-Profession": The Organization of Magic and Magical Healing Among Amhara.'' \emph{Ethnology} 14(3):245--65. doi: \href{https://doi.org/10.2307/3773255}{10.2307/3773255}.
+
+\end{document}
