@@ -1,9 +1,10 @@
 ---
-title: \LARGE \textbf{Supplementary Information for \emph{Ethnomedical specialists and supernatural theories of disease}}
+title: \LARGE \textbf{Supplementary Information for \emph{Ethnomedical specialists and their supernatural theories of disease}}
 author: "Aaron D. Lightner, Cynthiann Heckelsmiller, Edward H. Hagen"
 output: 
   bookdown::pdf_document2:
     latex_engine: xelatex
+    keep_tex: true
 header-includes: |
   \newcommand{\beginsupplement}{
     \setcounter{table}{0}  
@@ -11,6 +12,8 @@ header-includes: |
     \setcounter{figure}{0} 
     \renewcommand{\thefigure}{S\arabic{figure}}
   }
+  \usepackage{tabularx}
+  \usepackage{booktabs}
 ---
 
 \beginsupplement
@@ -26,6 +29,80 @@ knitr::opts_chunk$set(dev = "cairo_pdf")
 ```{r scriptSI}
 source('supplementary/supplement.R')
 ```
+
+# Supplementary description of the hypotheses in Study 1
+
+In the main text we outlined and motivated four hypotheses, for which we tested the levels of support in the ethnographic record using the eHRAF. An absence of evidence does not constitute evidence of absence in the ethnographic record, but two hypotheses (*efficacious healing* and *prestigious mentors*) were amenable to opposing hypotheses, i.e., models that we could also find evidence for which stood in opposition to their counterparts (*inefficacious healing* and *low status*, respectively). These hypotheses, their descriptions, and the coded variables that supported them in this study are listed in table S1, and in figure 2 in the main text. 
+
+## Additional variable groupings in study 1
+
+Readers will notice that there are six hypotheses here, included in table S1 and figure 2 of the main text, but figure 2 contains a total of ten variable groupings. We should emphasize that there are additional variable groupings in figure 2 of the main text because they correspond not to the hypotheses in table S1, but to useful groupings that correspond to variables about client incentives vs. disincentives for patronizing a specialist, and to variables about specialist knowledge attributes and social attributes. These are not hypotheses, but ways of dividing up the variables into useful and intuitive categories. See the main text for details.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{\textwidth}{@{}lXX@{}}
+        \toprule
+        \textbf{Hypothesis}   & \textbf{Description}      & \textbf{Coded Variables}\\
+        \midrule
+        Religiosity  & 
+          Ethnomedical specialists are religious figures and/or use supernatural theories of disease & 
+          \begin{itemize}
+          \item Supernatural
+          \item Religious leadership
+          \item Costly ritual
+          \item Expert prescribes behavior/ritual
+          \item Learns by revelation
+          \end{itemize}  \\
+        \hline
+      Efficacious healing    & 
+        Ethnomedical specialists employ techniques that are effective for diagnosing and/or treating illnesses that clients present to them  & 
+        \begin{itemize}
+          \item Evidence of success
+          \item Reputation for efficacy
+          \item Patronage based on efficacy
+          \end{itemize}  \\
+        \hline
+        Inefficacious healing    & 
+        Ethnomedical specialists employ techniques that are \emph{not} effective for diagnosing and/or treating illnesses that clients present to them  & 
+        \begin{itemize}
+          \item Evidence of failure
+          \item Reputation for inefficacy
+          \end{itemize}  \\
+        \hline
+        Market for specialists    & 
+        Clients patronize ethnomedical specialists who confer benefits to them, with a preference or expectation for effective solutions to their problems, in a transactional exchange of services for payment  & 
+        \begin{itemize}
+          \item Payment to expert
+          \item Knowledge distributed/multiple experts
+          \item Narrow specialization
+          \item Knowledge domain is not widespread
+          \item Assists with uncommon/serious problem
+          \end{itemize}  \\
+        \hline
+        Prestigious mentors    & 
+        Acolytes seek proximity to prestigious ethnomedical specialists who teach in an apprenticeship or other (formal or informal) mentorship context  & 
+        \begin{itemize}
+          \item Prestige
+          \item Trustworthy
+          \item Others seek proximity to expert
+          \item Reputation for generosity
+          \item Expert teaches others
+          \end{itemize}  \\
+        \hline
+        Low status    & 
+        Ethnomedical specialists are in low status positions, are avoided and/or scorned by society, and are generally mistrusted  & 
+        \begin{itemize}
+          \item Anti-prestige/low status
+          \item Not trustworthy
+          \item Reputation for selfishness
+          \item Others avoid the expert
+          \end{itemize}  \\
+        \hline
+        \bottomrule
+    \end{tabularx}
+    \caption{\label{tab:vartable}Hypotheses and the coded variables that were tested in the cross-cultural ethnographic record in Study 1.}
+\end{table}
+
 
 # Supplementary descriptions of the methods in Study 1
 
@@ -398,9 +475,24 @@ agreementplot(table(ratings$al, ratings$ch))
 
 This section outlines additional exploratory results from the cross-cultural study, based on data from the eHRAF and, in a few specified cases, from the SCCS.
 
+## SCCS variables used for the PCA
+
+The SCCS consists of 186 cultures (rows) and 1781 culture-level variables (columns). As we describe in the main text, we filtered out these 1781 variables to include only those that are both quantitative measures (i.e., either ordinal or continuous variables) and complete, with no missing data for any of the 186 cultures. This resulted in `r length(r1_str)` variables, which are listed in table S2.
+
+```{r sccsvartable}
+knitr::kable(
+  r1_str2,
+  digits=2,
+  caption = 'Quantitative variables from the SCCS with no missing data that were used for our culture-level PCA.',
+  booktabs = TRUE, valign = 't'
+) %>%
+    kableExtra::kable_styling(font_size=9)
+```
+
+
 ## Generalized linear mixed models based on cross-cultural data
 
-We use a generalized logistic mixed model (GLMM) to model our PCA results (PC1: culture complexity and scale; PC2: pathogen stress, proximity to equator, and lower reliance on market economies) as predictors of presence/absence of supernatural theories of disease in the text records, with cultures as random intercepts. We found a "statistically significant" result, in which PC2 was positively associated with supernatural theories of disease, and PC1 was not clearly associated with the supernatural. See table S1.
+We use a generalized logistic mixed model (GLMM) to model our PCA results (PC1: culture complexity and scale; PC2: pathogen stress, proximity to equator, and lower reliance on market economies) as predictors of presence/absence of supernatural theories of disease in the text records, with cultures as random intercepts. We found a "statistically significant" result, in which PC2 was positively associated with supernatural theories of disease, and PC1 was not clearly associated with the supernatural. See table S3.
 
 ```{r sccsglmm, results='asis'}
 stargazer::stargazer(sm1, digits=2,
@@ -420,7 +512,7 @@ This result, though interesting, should be viewed with skepticism. PC1 consists 
 
 As we state in the main text, however, we can not draw this conclusion based on the association between PC2 and the supernatural, because pathogen stress is confounded by other contributing factors to PC2, such as latitude and cultural complexity. In fact, PC1 and PC2 are sufficiently related that we cannot even draw a firm conclusion about the apparent lack of effect of PC1 on the supernatural. 
 
-To see this, notice in table S2 that if pathogen stress is the sole predictor of supernatural, then as we might have expected, we find the weak positive association between pathogen stress and supernatural theories of disease. Adding latitude as a predictor, however, makes the effect of pathogen stress disappear. This is perhaps unsurprising; pathogen stress might be higher in tropical climates than in temperate ones. And yet, further complicating matters, adding PC1 (cultural complexity and scale) thereafter makes PC1 appear to have a significant negative effect on supernatural theories. See table S2.
+To see this, notice in table S4 that if pathogen stress is the sole predictor of supernatural, then as we might have expected, we find the weak positive association between pathogen stress and supernatural theories of disease. Adding latitude as a predictor, however, makes the effect of pathogen stress disappear. This is perhaps unsurprising; pathogen stress might be higher in tropical climates than in temperate ones. And yet, further complicating matters, adding PC1 (cultural complexity and scale) thereafter makes PC1 appear to have a significant negative effect on supernatural theories. See table S4.
 
 ```{r sccsglmm2, results='asis'}
 stargazer::stargazer(sm3, sm4, sm5, digits=2,
@@ -438,11 +530,17 @@ stargazer::stargazer(sm3, sm4, sm5, digits=2,
 
 This is not to suggest that our analyses of PC1, PC2, and supernatural theories of disease is completely uninformative (quite the contrary). However, it does suggest that, as we conclude in the main text, confirmatory research is needed to directly test the hypothesis that pathogen stress is associated with supernatural theories of disease.
 
+\newpage
+
 # Supplementary results in Study 2: Maasai field data
 
 This section outlines additional data and results from the Maasai fieldwork study.
 
 ## Participant examples of conflict between science and religion
+
+When we asked participants about their views on science and religion, we specifically asked:
+
+> Sometimes people might have ideas that our beliefs about god make us disagree with. Do your beliefs about god ever make you disagree with the ideas that scientists, such as doctors, veterinarians, or agricultural specialists, might have?
 
 Some Maasai participants ($N=12$) agreed that scientific ideas sometimes conflict with their beliefs about god or religion. All of these participants were Christians. When asked as a follow-up question to give an example of how this might be the case, some (but not all) participants offered an example. The following quotations are examples of responses that were transcribed during interviews:
 
@@ -471,7 +569,7 @@ field_whoHelps
 
 ## PCA results for explanations of how herbal medicines work
 
-After coding for presence/absence of content features of each participant's explanation of how a common herbal medicine works, we concluded based on visual inspection of the heatmap (figure 15 in the main text) that people were broadly divided into "don't know", "knowing when/how to make the medicine", and and "mechanistic" explanations that use substance and essence terms. We also conducted a PCA on the binary data matrix of these responses. PC1 showed that participants who did not know how the medicine worked, and/or did not have a working model of the mechanisms by which the medicine worked, tended to be associated with explanations invoking the conditions under which a person should prepare the medicine, whereas explanations tended to invoke substances, essences, and physiological terms. See figure \@ref(fig:pcaExplain).
+After coding for presence/absence of content features of each participant's explanation of how a common herbal medicine works, we concluded based on visual inspection of the heatmap (figure 14 in the main text) that people were broadly divided into "don't know", "knowing when/how to make the medicine", and and "mechanistic" explanations that use substance and essence terms. We also conducted a PCA on the binary data matrix of these responses. PC1 showed that participants who did not know how the medicine worked, and/or did not have a working model of the mechanisms by which the medicine worked, tended to be associated with explanations invoking the conditions under which a person should prepare the medicine, whereas explanations tended to invoke substances, essences, and physiological terms. See figure \@ref(fig:pcaExplain).
 
 ```{r pcaExplain, fig.cap='PCA loadings on the first two principal components in the explanations of how herbal medicine works among Maasai participants. PC1 corresponds to knowledgeability and detail of explanation, and PC2 corresponds to the necessary conditions and preparation steps for making the medicine.', fig.align="center", fig.height=10, fig.width=12}
 field_PCA_loadings

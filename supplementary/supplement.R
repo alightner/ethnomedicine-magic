@@ -22,3 +22,8 @@ source('eHRAF-IRR-check.R')
 source('eHRAF-cultural-variation2.R')
 source('eHRAF-SCCS.R')
 source('FIELD-analysis.R')
+
+
+load('supplementary/SCCS_vars.rda')
+r1_str2 <- as_tibble(r1_str)
+colnames(r1_str2) <- 'SCCS variables'

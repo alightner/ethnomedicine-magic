@@ -93,6 +93,10 @@ culture3 <- df %>%
 
 culture3$supernat_binary <- (culture3$supernatural>mean(culture3$supernatural))
 
+culture3$pc1[culture3$culture=='Wolof'] <- culture3$pc1[culture3$culture=='Hausa'] - 0.15  
+# this^ "manual jitter" avoids overlapping points with Hausa on the plot, and is purely aesthetic
+
+set.seed(20212021)
 SCCS_biplot <- 
   ggplot(culture3, aes(x=pc1, y=pc2, 
                      label=culture)) +

@@ -45,7 +45,9 @@ pcaLaibon1 <-
   scale_colour_binary() +
   scale_fill_binary() +
   theme_classic(base_size=10) +
-  labs(colour='', fill='', x='PC1', y='')
+  labs(colour='', fill='', x='PC1', y='') +
+  guides(colour=guide_legend(reverse = TRUE),
+         fill=guide_legend(reverse = TRUE))
 
 pcaLaibon2 <- 
   pca_loadings_plot(pca, components=1) +
